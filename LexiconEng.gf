@@ -35,12 +35,12 @@ resource LexiconEng = open SyntaxEng,ParadigmsEng in {
         Europe_N : N = mkN "Europe" ;
         Fennoscandia_N : N = mkN "Fennoscandia" ;
         Ireland_N : N = mkN "Ireland" ;
-        Martin_N : N = "Martin" ;
+        Martin_N : N = mkN "Martin" ;
         Melanesia_N : N = mkN "Melanesia" ;
         Micronesia_N : N = mkN "Micronesia" ;
         MiddleAmerica_N : N = mkN Middle_Str America_N ;
         MiddleEast_N : N = mkN Middle_Str East_Str ;
-        Netherland_N : N = mkN Netherland_N ;
+        Netherlands_N : N = mkN "Netherland" ;
         NewZealand_N : N = mkN "New Zealand" ;
         NorthAfrica_N : N = mkN North_Str Africa_N ;
         NorthAmerica_N : N = mkN North_Str America_N ;
@@ -180,7 +180,7 @@ resource LexiconEng = open SyntaxEng,ParadigmsEng in {
 		Namibia_N : N = mkN "Namibia" ; 
 		Nauru_N : N = mkN "Nauru" ; 
 		Nepal_N : N = mkN "Nepal" ; 
-		Netherlands_N : N = mkN "Netherlands" ; 
+		-- Netherlands_N : N = mkN "Netherlands" ; 
 		NewZealand_N : N = mkN "New Zealand" ; 
 		Nicaragua_N : N = mkN "Nicaragua" ; 
 		Niger_N : N = mkN "Niger" ; 
@@ -839,7 +839,7 @@ resource LexiconEng = open SyntaxEng,ParadigmsEng in {
         European_A : A = mkA "European" ;
         Low_A : A = mkA "Low" ;
         Nordic_A : A = mkA "Nordic" ;
-        Western_A : = mkA "Western" ;
+        Western_A : A = mkA "Western" ;
      
         
         -- place name strings
@@ -858,6 +858,6 @@ resource LexiconEng = open SyntaxEng,ParadigmsEng in {
         Southwest_Str : Str = "Southwest" ; 
         Sovereign_Str : Str = "sovereign" ;     
 		West_Str : Str = "West" ;
-		Latin_Str : Str = "Latin"
+		Latin_Str : Str = "Latin" ;
 		
 }
