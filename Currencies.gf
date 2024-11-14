@@ -23,7 +23,7 @@ abstract Currencies = {
 		Real : Currency ;
 		Ringgit : Currency ;
 		Lev : Currency ;
-		CFAFranc : Currency ;
+		CentralAfricanFranc : Currency ;
 		BurundianFranc : Currency ;
 		Escudo : Currency ;
 		Riel : Currency ;
