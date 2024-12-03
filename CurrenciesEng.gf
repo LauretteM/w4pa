@@ -1,4 +1,4 @@
-concrete CurrenciesEng of Currencies = open open SyntaxEng,ParadigmsEng,ParamX,Prelude,LexiconEng in {
+concrete CurrenciesEng of Currencies = open SyntaxEng,ParadigmsEng,ParamX,Prelude,LexiconEng in {
 
     lincat
         Currency = NP ;
@@ -18,10 +18,10 @@ concrete CurrenciesEng of Currencies = open open SyntaxEng,ParadigmsEng,ParamX,P
 		BrazilianReal = mkNP BrazilianReal_N ;
 		BruneiDollar = mkNP BruneiDollar_N ;
 		BulgarianLev = mkNP BulgarianLev_N ;
-		BurundiFranc = mkNP BurundiFranc_N ;
+		BurundianFranc = mkNP BurundianFranc_N ;
 		CanadianDollar = mkNP CanadianDollar_N ;
 		CapeVerdeanEscudo = mkNP CapeVerdeanEscudo_N ;
-		CentralAfricanFranc = mkNP CentralAfricanCFAFranc_N ;
+		CentralAfricanFranc = mkNP CentralAfricanFranc_N ;
 		ChileanPeso = mkNP ChileanPeso_N ;
 		ColombianPeso = mkNP ColombianPeso_N ;
 		ComorianFranc = mkNP ComorianFranc_N ;
@@ -50,7 +50,7 @@ concrete CurrenciesEng of Currencies = open open SyntaxEng,ParadigmsEng,ParamX,P
 		GuyaneseDollar = mkNP GuyaneseDollar_N ;
 		HonduranLempira = mkNP HonduranLempira_N ;
 		HungarianForint = mkNP HungarianForint_N ;
-		IcelandicKróna = mkNP IcelandicKróna_N ;
+		IcelandicKrona = mkNP IcelandicKrona_N ;
 		IndianRupee = mkNP IndianRupee_N ;
 		IndonesianRupiah = mkNP IndonesianRupiah_N ;
 		IranianRial = mkNP IranianRial_N ;
@@ -87,7 +87,7 @@ concrete CurrenciesEng of Currencies = open open SyntaxEng,ParadigmsEng,ParamX,P
 		NamibianDollar = mkNP NamibianDollar_N ;
 		NepaleseRupee = mkNP NepaleseRupee_N ;
 		NewZealandDollar = mkNP NewZealandDollar_N ;
-		NicaraguanCórdoba = mkNP NicaraguanCórdoba_N ;
+		NicaraguanCordoba = mkNP NicaraguanCordoba_N ;
 		NigerianNaira = mkNP NigerianNaira_N ;
 		Ngultrum = mkNP Ngultrum_N ;
 		NorthKoreanWon = mkNP NorthKoreanWon_N ;

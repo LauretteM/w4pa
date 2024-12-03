@@ -1,7 +1,7 @@
 concrete CitiesEng of Cities = open SyntaxEng,ParadigmsEng,ParamX,Prelude,LexiconEng in {
 
     lincat
-        City = NP ;
+		CapitalCity = NP ;
 
     lin
         Kabul = mkNP Kabul_N;
@@ -51,7 +51,7 @@ concrete CitiesEng of Cities = open SyntaxEng,ParadigmsEng,ParamX,Prelude,Lexico
 		Nicosia = mkNP Nicosia_N;
 		Prague = mkNP Prague_N;
 		Copenhagen = mkNP Copenhagen_N;
-		Djibouti = mkNP Djibouti_N;
+		DjiboutiCity = mkNP Djibouti_N;
 		Roseau = mkNP Roseau_N;
 		SantoDomingo = mkNP SantoDomingo_N;
 		Dili = mkNP Dili_N;
@@ -117,7 +117,7 @@ concrete CitiesEng of Cities = open SyntaxEng,ParadigmsEng,ParamX,Prelude,Lexico
 		MexicoCity = mkNP MexicoCity_N;
 		Palikir = mkNP Palikir_N;
 		Chisinau = mkNP Chisinau_N;
-		Monaco = mkNP Monaco_N;
+		MonacoCity = mkNP Monaco_N;
 		Ulaanbaatar = mkNP Ulaanbaatar_N;
 		Podgorica = mkNP Podgorica_N;
 		Rabat = mkNP Rabat_N;
@@ -153,14 +153,14 @@ concrete CitiesEng of Cities = open SyntaxEng,ParadigmsEng,ParamX,Prelude,Lexico
 		Castries = mkNP Castries_N;
 		Kingstown = mkNP Kingstown_N;
 		Apia = mkNP Apia_N;
-		SanMarino = mkNP SanMarino_N;
+		SanMarinoCity = mkNP SanMarinoCity_N;
 		SaoTome = mkNP SaoTome_N;
 		Riyadh = mkNP Riyadh_N;
 		Dakar = mkNP Dakar_N;
 		Belgrade = mkNP Belgrade_N;
 		Victoria = mkNP Victoria_N;
 		Freetown = mkNP Freetown_N;
-		Singapore = mkNP Singapore_N;
+		SingaporeCity = mkNP Singapore_N;
 		Bratislava = mkNP Bratislava_N;
 		Ljubljana = mkNP Ljubljana_N;
 		Honiara = mkNP Honiara_N;
@@ -180,7 +180,7 @@ concrete CitiesEng of Cities = open SyntaxEng,ParadigmsEng,ParamX,Prelude,Lexico
 		Dodoma = mkNP Dodoma_N;
 		Bangkok = mkNP Bangkok_N;
 		Lome = mkNP Lome_N;
-		Nukualofa = mkNP Nukualofa_N;
+		Nukualofa = mkNP NukuAlofa_N;
 		Tunis = mkNP Tunis_N;
 		Ankara = mkNP Ankara_N;
 		Ashgabat = mkNP Ashgabat_N;

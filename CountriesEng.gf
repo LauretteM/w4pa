@@ -10,13 +10,13 @@ concrete CountriesEng of Countries = open SyntaxEng,ParadigmsEng,ParamX,Prelude,
         IslandCountry = mkNP aSg_Det (mkCN island_N (mkNP country_N)) ;
         DividedTerritory = mkNP aSg_Det (mkCN divided_A territory_N) ;
         LandlockedCountry = mkNP aSg_Det (mkCN landlocked_A country_N) ;
-        -- TranscontinentalCountry : CountryKind ;
-        -- DevelopedCountry : CountryKind ;
-        -- DevelopingCountry : CountryKind ;
-        -- PersonalUnion : CountryKind ;
-        -- SovereignState : CountryKind ;
-        -- MediterraneanCountry : CountryKind ;
-        -- AutonomousCountryDenmark : CountryKind ;
+        TranscontinentalCountry = mkNP aSg_Det (mkCN transcontinental_A country_N) ;
+        DevelopedCountry = mkNP aSg_Det (mkCN developed_A country_N) ;
+        DevelopingCountry = mkNP aSg_Det (mkCN developing_A country_N) ;
+        PersonalUnion = mkNP aSg_Det (mkCN personal_A union_N) ;
+        SovereignState = mkNP aSg_Det (mkCN sovereign_A  state_N) ;
+        MediterraneanCountry = mkNP aSg_Det (mkCN mediterranean_A country_N) ;
+        AutonomousCountryDenmark = mkNP aSg_Det (mkCN autonomous_A country_N) ;
 
         Africa = mkNP Africa_N ;
         Europe = mkNP Europe_N ;

@@ -4,8 +4,8 @@ concrete DescriptionsEng of Descriptions = CountriesEng ** open SyntaxEng,Paradi
         Description = NP ;
 
     lin
-        KindDescription ck = ck ;
-        LocationDescription cl = mkNP (mkNP aSg_Det country_N) (SyntaxEng.mkAdv in_Prep cl) ;
-        FullDescription ck cl = mkNP ck (SyntaxEng.mkAdv in_Prep cl) ;
+        CountryKindDescription ck = ck ;
+        CountryLocationDescription cl = mkNP (mkNP aSg_Det country_N) (SyntaxEng.mkAdv in_Prep cl) ;
+        FullCountryDescription ck cl = mkNP ck (SyntaxEng.mkAdv in_Prep cl) ;
 
 }

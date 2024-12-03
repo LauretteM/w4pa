@@ -18,6 +18,7 @@ resource LexiconEng = open SyntaxEng,ParadigmsEng in {
         developing_A : A = mkA "developing" ;
         sovereign_A : A = mkA "sovereign" ;
         mediterranean_A : A = mkA "mediterranean" ;
+		personal_A : A = mkA "personal" ;
 
         -- placed name nouns
         Africa_N : N = mkN "Africa" ;
@@ -40,7 +41,7 @@ resource LexiconEng = open SyntaxEng,ParadigmsEng in {
         Micronesia_N : N = mkN "Micronesia" ;
         MiddleAmerica_N : N = mkN Middle_Str America_N ;
         MiddleEast_N : N = mkN Middle_Str East_Str ;
-        Netherlands_N : N = mkN "Netherland" ;
+        -- Netherlands_N : N = mkN "Netherland" ;
         NewZealand_N : N = mkN "New Zealand" ;
         NorthAfrica_N : N = mkN North_Str Africa_N ;
         NorthAmerica_N : N = mkN North_Str America_N ;
@@ -396,6 +397,7 @@ resource LexiconEng = open SyntaxEng,ParadigmsEng in {
 		Sanaa_N : N = mkN "Sana'a" ;
 		Lusaka_N : N = mkN "Lusaka" ;
 		Harare_N : N = mkN "Harare" ;
+		Belgrade_N : N = mkN "Belgrade" ;
 
 
         -- currency names nouns

@@ -1,4 +1,4 @@
-concrete LanguageEng of Languages = open open SyntaxEng,ParadigmsEng,ParamX,Prelude,LexiconEng in {
+concrete LanguagesEng of Languages = open SyntaxEng,ParadigmsEng,ParamX,Prelude,LexiconEng in {
 
     lincat
         Language = NP ;
@@ -83,7 +83,7 @@ concrete LanguageEng of Languages = open open SyntaxEng,ParadigmsEng,ParamX,Prel
 		EasternMin = mkNP EasternMin_N ;
 		EasternTamang = mkNP EasternTamang_N ;
 		Edo = mkNP Edo_N ;
-		Efik = mkNPEfik_N ;
+		Efik = mkNP Efik_N ;
 		EgyptianArabic = mkNP EgyptianArabic_N ;
 		Emilian = mkNP Emilian_N ;
 		EmilianRomagnol = mkNP EmilianRomagnol_N ;
