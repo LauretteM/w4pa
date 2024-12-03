@@ -1,0 +1,23 @@
+English_language:
+  labels:
+    eng: "English"
+    zul: "isiNgisi"
+    afr: "Engels"
+  descriptions:
+    eng: "West Germanic language"
+    zul: "Ulimi lwaseNtshonalanga German"
+    afr: "'n Wes-Germaanse taal"
+  wd_id: "Q1860"
+  gf_id: "English"
+Afrikaans_language:
+  labels:
+    eng: "Afrikaans"
+    zul: "isiBhunu"
+    afr: "Afrikaans"
+  wd_id: "Q14196"
+  gf_id: "Afrikaans"
+Cape_Malay_language:
+  labels:
+    eng: "Cape Malay"
+    afr: "Kaaps-Maleisies"
+  gf_id: "Cape_Malay"
