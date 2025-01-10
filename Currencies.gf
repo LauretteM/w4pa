@@ -126,5 +126,9 @@ abstract Currencies = {
 		Tugrik : Currency ;
 		USDollar : Currency ;
 		WestAfricanFranc : Currency ;
+		YemeniRial : Currency ;
+		YuanRenminbi : Currency ;
+		ZambianKwacha : Currency ;
+		ZimbabweanDollar : Currency ;
 
 }

@@ -86,7 +86,8 @@ abstract Countries = {
 		Algeria : Country ;
 		Andorra : Country ;
 		Angola : Country ;
-		AntiguaAndBarbuda : Country ;
+		Antigua : Country ;
+		Barbuda : Country ;
 		Argentina : Country ;
 		Armenia : Country ;
 		Australia : Country ;
@@ -102,7 +103,8 @@ abstract Countries = {
 		Benin : Country ;
 		Bhutan : Country ;
 		Bolivia : Country ;
-		BosniaAndHerzegovina : Country ;
+		Bosnia : Country ;
+		Herzegovina : Country ;
 		Botswana : Country ;
 		Brazil : Country ;
 		Brunei : Country ;
@@ -129,6 +131,7 @@ abstract Countries = {
 		Djibouti : Country ;
 		Dominica : Country ;
 		DominicanRepublic : Country ;
+		East Timor : Country ;
 		Ecuador : Country ;
 		Egypt : Country ;
 		ElSalvador : Country ;

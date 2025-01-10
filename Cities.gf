@@ -196,6 +196,8 @@ abstract Cities = {
 		VaticanCity : CapitalCity ;
 		Caracas : CapitalCity ;
 		Hanoi : CapitalCity ;
+		Sanaa : CapitalCity ;
 		Lusaka : CapitalCity ;
 		Harare : CapitalCity ;
+		Belgrade: CapitalCity ;
 }
