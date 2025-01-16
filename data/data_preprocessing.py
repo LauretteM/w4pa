@@ -11,6 +11,9 @@ def get_function_name(entity_name):
         .replace(',','')
     return fun_name
 
+def get_entity_id(entity_url):
+    return entity_url[31:]
+
 if __name__ == '__main__':
 
     import argparse
@@ -28,7 +31,7 @@ if __name__ == '__main__':
 
     newheading = [datarows[0][0],datarows[0][1],'function name']
     # newrows = [(qid,entity_name,get_function_name(entity_name)) for (qid,entity_name) in datarows[1:]]
-    newrows = [(r[0], r[1], get_function_name(r[1])) for r in datarows[1:]]
+    newrows = [(r[0], get_entity_id(r[0]),r[1], get_function_name(r[1])) for r in datarows[1:]]
 
     if args.output:
         with open(args.output,'w') as f:
