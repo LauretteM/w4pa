@@ -3,7 +3,12 @@ from unidecode import unidecode
 
 def get_function_name(entity_name):
     fun_name = unidecode(entity_name)
-    fun_name = fun_name.replace("'",'').replace(' ','_')
+    fun_name = fun_name.replace("'", "") \
+        .replace(" ", "_") \
+        .replace("`",'') \
+        .replace('-','_') \
+        .replace('.','') \
+        .replace(',','')
     return fun_name
 
 if __name__ == '__main__':
