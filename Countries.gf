@@ -131,7 +131,7 @@ abstract Countries = {
 		Djibouti : Country ;
 		Dominica : Country ;
 		DominicanRepublic : Country ;
-		East Timor : Country ;
+		East_Timor : Country ;
 		Ecuador : Country ;
 		Egypt : Country ;
 		ElSalvador : Country ;
