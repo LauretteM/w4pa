@@ -1,0 +1,19 @@
+#Issuers of currencies used in 3 or more countries
+SELECT ?currency ?currencyLabel ?centralbankLabel ?count
+WHERE
+{
+  {
+    SELECT ?currency (COUNT(?country) AS ?count)
+    WHERE
+    {
+      ?currency wdt:P17 ?country.
+      ?currency wdt:P31 wd:Q8142.
+    }
+    GROUP BY ?currency ?centralbank
+    ORDER BY DESC(?count)
+  }
+  ?currency wdt:P562 ?centralbank.
+  FILTER (?count > 2).
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+ORDER BY DESC(?count)
