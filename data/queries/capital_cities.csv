@@ -1,4 +1,4 @@
-city,cityLabel_en
+area,areaLabel_en
 http://www.wikidata.org/entity/Q1519,Abu Dhabi
 http://www.wikidata.org/entity/Q3787,Abuja
 http://www.wikidata.org/entity/Q3761,Accra
@@ -223,7 +223,7 @@ http://www.wikidata.org/entity/Q1741,Vienna
 http://www.wikidata.org/entity/Q9326,Vientiane
 http://www.wikidata.org/entity/Q216,Vilnius
 http://www.wikidata.org/entity/Q270,Warsaw
-http://www.wikidata.org/entity/Q61,"Washington, D.C."
+"http://www.wikidata.org/entity/Q61,""Washington, D.C."""
 http://www.wikidata.org/entity/Q23661,Wellington
 http://www.wikidata.org/entity/Q3935,Windhoek
 http://www.wikidata.org/entity/Q42757437,World Headquarters of the Bektashi
