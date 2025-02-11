@@ -2,6 +2,7 @@ abstract Currencies = {
 
     cat
         Currency ;
+		CentralBank ;
     
     fun
         Afghani : Currency ;
