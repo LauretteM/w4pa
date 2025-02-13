@@ -1,47 +1,47 @@
-area,entity id,areaLabel_en,function name
-http://www.wikidata.org/entity/Q15,Q15,Africa,Africa
-http://www.wikidata.org/entity/Q18,Q18,South America,South_America
-http://www.wikidata.org/entity/Q48,Q48,Asia,Asia
-http://www.wikidata.org/entity/Q107323313,Q107323313,Australia and New Zealand,Australia_and_New_Zealand
-http://www.wikidata.org/entity/Q132959,Q132959,Sub-Saharan Africa,Sub_Saharan_Africa
-http://www.wikidata.org/entity/Q143487,Q143487,Arab world,Arab_world
-http://www.wikidata.org/entity/Q18479603,Q18479603,Continental Central America,Continental_Central_America
-http://www.wikidata.org/entity/Q2218629,Q2218629,Arab states of the Arab Gulf,Arab_states_of_the_Arab_Gulf
-http://www.wikidata.org/entity/Q236118,Q236118,Southern Cone,Southern_Cone
-http://www.wikidata.org/entity/Q263686,Q263686,Southeast Europe,Southeast_Europe
-http://www.wikidata.org/entity/Q2749444,Q2749444,South-West Europe,South_West_Europe
-http://www.wikidata.org/entity/Q3359409,Q3359409,Micronesia,Micronesia
-http://www.wikidata.org/entity/Q377916,Q377916,Ibero-America,Ibero_America
-http://www.wikidata.org/entity/Q5317255,Q5317255,Dutch Caribbean,Dutch_Caribbean
-http://www.wikidata.org/entity/Q604496,Q604496,Fennoscandia,Fennoscandia
-http://www.wikidata.org/entity/Q664609,Q664609,Caribbean,Caribbean
-http://www.wikidata.org/entity/Q7569281,Q7569281,Southeast Africa,Southeast_Africa
-http://www.wikidata.org/entity/Q771405,Q771405,South Asia,South_Asia
-http://www.wikidata.org/entity/Q81483,Q81483,Levant,Levant
-http://www.wikidata.org/entity/Q11708,Q11708,Southeast Asia,Southeast_Asia
-http://www.wikidata.org/entity/Q12585,Q12585,Latin America,Latin_America
-http://www.wikidata.org/entity/Q18869,Q18869,Caucasus,Caucasus
-http://www.wikidata.org/entity/Q21195,Q21195,Scandinavia,Scandinavia
-http://www.wikidata.org/entity/Q23522,Q23522,Balkans,Balkans
-http://www.wikidata.org/entity/Q23792,Q23792,Palestine,Palestine
-http://www.wikidata.org/entity/Q27231,Q27231,East Asia,East_Asia
-http://www.wikidata.org/entity/Q27275,Q27275,Central Asia,Central_Asia
-http://www.wikidata.org/entity/Q27293,Q27293,West Asia,West_Asia
-http://www.wikidata.org/entity/Q27381,Q27381,North Africa,North_Africa
-http://www.wikidata.org/entity/Q27394,Q27394,Southern Africa,Southern_Africa
-http://www.wikidata.org/entity/Q27407,Q27407,East Africa,East_Africa
-http://www.wikidata.org/entity/Q27433,Q27433,Central Africa,Central_Africa
-http://www.wikidata.org/entity/Q27449,Q27449,Southern Europe,Southern_Europe
-http://www.wikidata.org/entity/Q27468,Q27468,Eastern Europe,Eastern_Europe
-http://www.wikidata.org/entity/Q27479,Q27479,Northern Europe,Northern_Europe
-http://www.wikidata.org/entity/Q27496,Q27496,Western Europe,Western_Europe
-http://www.wikidata.org/entity/Q27509,Q27509,Central Europe,Central_Europe
-http://www.wikidata.org/entity/Q29876,Q29876,Middle America,Middle_America
-http://www.wikidata.org/entity/Q35942,Q35942,Polynesia,Polynesia
-http://www.wikidata.org/entity/Q37394,Q37394,Melanesia,Melanesia
-http://www.wikidata.org/entity/Q39731,Q39731,Baltic states,Baltic_states
-http://www.wikidata.org/entity/Q43467,Q43467,Mainland Southeast Asia,Mainland_Southeast_Asia
-http://www.wikidata.org/entity/Q4412,Q4412,West Africa,West_Africa
-http://www.wikidata.org/entity/Q45256,Q45256,Australasia,Australasia
-http://www.wikidata.org/entity/Q55643,Q55643,Oceania,Oceania
-http://www.wikidata.org/entity/Q7204,Q7204,Middle East,Middle_East
+area,entity id,areaLabel_en,function name
+http://www.wikidata.org/entity/Q15,Q15,Africa,Africa
+http://www.wikidata.org/entity/Q2218629,Q2218629,Arab states of the Arab Gulf,Arab_states_of_the_Arab_Gulf
+http://www.wikidata.org/entity/Q143487,Q143487,Arab world,Arab_world
+http://www.wikidata.org/entity/Q48,Q48,Asia,Asia
+http://www.wikidata.org/entity/Q45256,Q45256,Australasia,Australasia
+http://www.wikidata.org/entity/Q107323313,Q107323313,Australia and New Zealand,Australia_and_New_Zealand
+http://www.wikidata.org/entity/Q23522,Q23522,Balkans,Balkans
+http://www.wikidata.org/entity/Q39731,Q39731,Baltic states,Baltic_states
+http://www.wikidata.org/entity/Q664609,Q664609,Caribbean,Caribbean
+http://www.wikidata.org/entity/Q18869,Q18869,Caucasus,Caucasus
+http://www.wikidata.org/entity/Q27433,Q27433,Central Africa,Central_Africa
+http://www.wikidata.org/entity/Q27275,Q27275,Central Asia,Central_Asia
+http://www.wikidata.org/entity/Q27509,Q27509,Central Europe,Central_Europe
+http://www.wikidata.org/entity/Q18479603,Q18479603,Continental Central America,Continental_Central_America
+http://www.wikidata.org/entity/Q5317255,Q5317255,Dutch Caribbean,Dutch_Caribbean
+http://www.wikidata.org/entity/Q27407,Q27407,East Africa,East_Africa
+http://www.wikidata.org/entity/Q27231,Q27231,East Asia,East_Asia
+http://www.wikidata.org/entity/Q27468,Q27468,Eastern Europe,Eastern_Europe
+http://www.wikidata.org/entity/Q604496,Q604496,Fennoscandia,Fennoscandia
+http://www.wikidata.org/entity/Q377916,Q377916,Ibero-America,Ibero_America
+http://www.wikidata.org/entity/Q12585,Q12585,Latin America,Latin_America
+http://www.wikidata.org/entity/Q81483,Q81483,Levant,Levant
+http://www.wikidata.org/entity/Q43467,Q43467,Mainland Southeast Asia,Mainland_Southeast_Asia
+http://www.wikidata.org/entity/Q37394,Q37394,Melanesia,Melanesia
+http://www.wikidata.org/entity/Q3359409,Q3359409,Micronesia,Micronesia
+http://www.wikidata.org/entity/Q29876,Q29876,Middle America,Middle_America
+http://www.wikidata.org/entity/Q7204,Q7204,Middle East,Middle_East
+http://www.wikidata.org/entity/Q27381,Q27381,North Africa,North_Africa
+http://www.wikidata.org/entity/Q27479,Q27479,Northern Europe,Northern_Europe
+http://www.wikidata.org/entity/Q55643,Q55643,Oceania,Oceania
+http://www.wikidata.org/entity/Q23792,Q23792,Palestine,Palestine
+http://www.wikidata.org/entity/Q35942,Q35942,Polynesia,Polynesia
+http://www.wikidata.org/entity/Q21195,Q21195,Scandinavia,Scandinavia
+http://www.wikidata.org/entity/Q18,Q18,South America,South_America
+http://www.wikidata.org/entity/Q771405,Q771405,South Asia,South_Asia
+http://www.wikidata.org/entity/Q2749444,Q2749444,South-West Europe,South_West_Europe
+http://www.wikidata.org/entity/Q7569281,Q7569281,Southeast Africa,Southeast_Africa
+http://www.wikidata.org/entity/Q11708,Q11708,Southeast Asia,Southeast_Asia
+http://www.wikidata.org/entity/Q263686,Q263686,Southeast Europe,Southeast_Europe
+http://www.wikidata.org/entity/Q27394,Q27394,Southern Africa,Southern_Africa
+http://www.wikidata.org/entity/Q236118,Q236118,Southern Cone,Southern_Cone
+http://www.wikidata.org/entity/Q27449,Q27449,Southern Europe,Southern_Europe
+http://www.wikidata.org/entity/Q132959,Q132959,Sub-Saharan Africa,Sub_Saharan_Africa
+http://www.wikidata.org/entity/Q4412,Q4412,West Africa,West_Africa
+http://www.wikidata.org/entity/Q27293,Q27293,West Asia,West_Asia
+http://www.wikidata.org/entity/Q27496,Q27496,Western Europe,Western_Europe
