@@ -1,355 +1,355 @@
-language,entity id,languageLabel,function name
-http://www.wikidata.org/entity/Q27683,Q27683,Acehnese,Acehnese
-http://www.wikidata.org/entity/Q34926,Q34926,Acholi,Acholi
-http://www.wikidata.org/entity/Q35035,Q35035,Adja,Adja
-http://www.wikidata.org/entity/Q27811,Q27811,Afar,Afar
-http://www.wikidata.org/entity/Q14196,Q14196,Afrikaans,Afrikaans
-http://www.wikidata.org/entity/Q25268,Q25268,Afroasiatic,Afroasiatic
-http://www.wikidata.org/entity/Q28026,Q28026,Akan,Akan
-http://www.wikidata.org/entity/Q8748,Q8748,Albanian,Albanian
-http://www.wikidata.org/entity/Q131339,Q131339,Alemannic,Alemannic
-http://www.wikidata.org/entity/Q56499,Q56499,Algerian Arabic,Algerian_Arabic
-http://www.wikidata.org/entity/Q8786,Q8786,Alsatian,Alsatian
-http://www.wikidata.org/entity/Q7976,Q7976,American English,American_English
-http://www.wikidata.org/entity/Q28244,Q28244,Amharic,Amharic
-http://www.wikidata.org/entity/Q3244184,Q3244184,Antiguan and Barbudan Creole,Antiguan_and_Barbudan_Creole
-http://www.wikidata.org/entity/Q13955,Q13955,Arabic,Arabic
-http://www.wikidata.org/entity/Q8785,Q8785,Armenian,Armenian
-http://www.wikidata.org/entity/Q29401,Q29401,Assamese,Assamese
-http://www.wikidata.org/entity/Q306626,Q306626,Austrian German,Austrian_German
-http://www.wikidata.org/entity/Q29579,Q29579,Awadhi,Awadhi
-http://www.wikidata.org/entity/Q4627,Q4627,Aymara,Aymara
-http://www.wikidata.org/entity/Q9292,Q9292,Azerbaijani,Azerbaijani
-http://www.wikidata.org/entity/Q2356364,Q2356364,Bagheli,Bagheli
-http://www.wikidata.org/entity/Q2426319,Q2426319,Bagri,Bagri
-http://www.wikidata.org/entity/Q33070,Q33070,Balinese,Balinese
-http://www.wikidata.org/entity/Q33049,Q33049,Balochi,Balochi
-http://www.wikidata.org/entity/Q33243,Q33243,Bambara,Bambara
-http://www.wikidata.org/entity/Q9610,Q9610,Bangla,Bangla
-http://www.wikidata.org/entity/Q33151,Q33151,Banjar,Banjar
-http://www.wikidata.org/entity/Q33219,Q33219,Banyumasan Javanese,Banyumasan_Javanese
-http://www.wikidata.org/entity/Q35107,Q35107,Baoulé,BaoulA(c)
-http://www.wikidata.org/entity/Q13389,Q13389,Bashkir,Bashkir
-http://www.wikidata.org/entity/Q29540,Q29540,Bavarian,Bavarian
-http://www.wikidata.org/entity/Q33025,Q33025,Beja,Beja
-http://www.wikidata.org/entity/Q9091,Q9091,Belarusian,Belarusian
-http://www.wikidata.org/entity/Q33052,Q33052,Bemba,Bemba
-http://www.wikidata.org/entity/Q33229,Q33229,Bhili,Bhili
-http://www.wikidata.org/entity/Q33268,Q33268,Bhojpuri,Bhojpuri
-http://www.wikidata.org/entity/Q33223,Q33223,Bodo,Bodo
-http://www.wikidata.org/entity/Q25167,Q25167,Bokmål,BokmAY=l
-http://www.wikidata.org/entity/Q34831,Q34831,Bonol,Bonol
-http://www.wikidata.org/entity/Q35100,Q35100,Bouyei,Bouyei
-http://www.wikidata.org/entity/Q33202,Q33202,Brahui,Brahui
-http://www.wikidata.org/entity/Q3436689,Q3436689,Brazilian Sign Language,Brazilian_Sign_Language
-http://www.wikidata.org/entity/Q33190,Q33190,Bugis,Bugis
-http://www.wikidata.org/entity/Q7918,Q7918,Bulgarian,Bulgarian
-http://www.wikidata.org/entity/Q9228,Q9228,Burmese,Burmese
-http://www.wikidata.org/entity/Q35541,Q35541,Cameroon Pidgin,Cameroon_Pidgin
-http://www.wikidata.org/entity/Q9186,Q9186,Cantonese,Cantonese
-http://www.wikidata.org/entity/Q7026,Q7026,Catalan,Catalan
-http://www.wikidata.org/entity/Q33239,Q33239,Cebuano,Cebuano
-http://www.wikidata.org/entity/Q49741,Q49741,Central Atlas Tamazight,Central_Atlas_Tamazight
-http://www.wikidata.org/entity/Q33284,Q33284,Central Bikol,Central_Bikol
-http://www.wikidata.org/entity/Q5061628,Q5061628,Central Pashto,Central_Pashto
-http://www.wikidata.org/entity/Q33350,Q33350,Chechen,Chechen
-http://www.wikidata.org/entity/Q33273,Q33273,Chewa,Chewa
-http://www.wikidata.org/entity/Q33158,Q33158,Chhattisgarhi,Chhattisgarhi
-http://www.wikidata.org/entity/Q7850,Q7850,Chinese,Chinese
-http://www.wikidata.org/entity/Q33173,Q33173,Chittagonian,Chittagonian
-http://www.wikidata.org/entity/Q110276967,Q110276967,Ciamis Sundanese,Ciamis_Sundanese
-http://www.wikidata.org/entity/Q10961696,Q10961696,Congo Swahili,Congo_Swahili
-http://www.wikidata.org/entity/Q6654,Q6654,Croatian,Croatian
-http://www.wikidata.org/entity/Q35147,Q35147,Cusco Quechua,Cusco_Quechua
-http://www.wikidata.org/entity/Q9056,Q9056,Czech,Czech
-http://www.wikidata.org/entity/Q35159,Q35159,Dagaare,Dagaare
-http://www.wikidata.org/entity/Q32238,Q32238,Dagbani,Dagbani
-http://www.wikidata.org/entity/Q669431,Q669431,Daknī,DaknA<<
-http://www.wikidata.org/entity/Q9035,Q9035,Danish,Danish
-http://www.wikidata.org/entity/Q178440,Q178440,Dari,Dari
-http://www.wikidata.org/entity/Q5414796,Q5414796,Dholuo,Dholuo
-http://www.wikidata.org/entity/Q633359,Q633359,Dhundari,Dhundari
-http://www.wikidata.org/entity/Q56466,Q56466,Dinka,Dinka
-http://www.wikidata.org/entity/Q32706,Q32706,Dioula,Dioula
-http://www.wikidata.org/entity/Q32730,Q32730,Dogri,Dogri
-http://www.wikidata.org/entity/Q35394,Q35394,Domari,Domari
-http://www.wikidata.org/entity/Q7411,Q7411,Dutch,Dutch
-http://www.wikidata.org/entity/Q36455,Q36455,Eastern Min,Eastern_Min
-http://www.wikidata.org/entity/Q12953177,Q12953177,Eastern Tamang,Eastern_Tamang
-http://www.wikidata.org/entity/Q35375,Q35375,Edo,Edo
-http://www.wikidata.org/entity/Q35377,Q35377,Efik,Efik
-http://www.wikidata.org/entity/Q29919,Q29919,Egyptian Arabic,Egyptian_Arabic
-http://www.wikidata.org/entity/Q1057898,Q1057898,Emilian,Emilian
-http://www.wikidata.org/entity/Q242648,Q242648,Emilian–Romagnol,"EmilianaEUR""Romagnol"
-http://www.wikidata.org/entity/Q1860,Q1860,English,English
-http://www.wikidata.org/entity/Q143,Q143,Esperanto,Esperanto
-http://www.wikidata.org/entity/Q9072,Q9072,Estonian,Estonian
-http://www.wikidata.org/entity/Q30005,Q30005,Ewe,Ewe
-http://www.wikidata.org/entity/Q1412,Q1412,Finnish,Finnish
-http://www.wikidata.org/entity/Q33291,Q33291,Fon,Fon
-http://www.wikidata.org/entity/Q150,Q150,French,French
-http://www.wikidata.org/entity/Q33454,Q33454,Fula,Fula
-http://www.wikidata.org/entity/Q9307,Q9307,Galician,Galician
-http://www.wikidata.org/entity/Q56323,Q56323,Gamo-Gofa-Dawro,Gamo_Gofa_Dawro
-http://www.wikidata.org/entity/Q33475,Q33475,Gan Chinese,Gan_Chinese
-http://www.wikidata.org/entity/Q33459,Q33459,Garhwali,Garhwali
-http://www.wikidata.org/entity/Q8108,Q8108,Georgian,Georgian
-http://www.wikidata.org/entity/Q188,Q188,German,German
-http://www.wikidata.org/entity/Q5555465,Q5555465,Ghanaian Pidgin English,Ghanaian_Pidgin_English
-http://www.wikidata.org/entity/Q33587,Q33587,Gikuyu,Gikuyu
-http://www.wikidata.org/entity/Q33657,Q33657,Gilaki,Gilaki
-http://www.wikidata.org/entity/Q5575236,Q5575236,Goan Konkani,Goan_Konkani
-http://www.wikidata.org/entity/Q1775361,Q1775361,Gondi,Gondi
-http://www.wikidata.org/entity/Q9129,Q9129,Greek,Greek
-http://www.wikidata.org/entity/Q5137,Q5137,Gujarati,Gujarati
-http://www.wikidata.org/entity/Q3111668,Q3111668,Gun,Gun
-http://www.wikidata.org/entity/Q3510366,Q3510366,Hadhrami Arabic,Hadhrami_Arabic
-http://www.wikidata.org/entity/Q934541,Q934541,Hainanese,Hainanese
-http://www.wikidata.org/entity/Q33491,Q33491,Haitian Creole,Haitian_Creole
-http://www.wikidata.org/entity/Q33375,Q33375,Hakka Chinese,Hakka_Chinese
-http://www.wikidata.org/entity/Q33410,Q33410,Haryanvi,Haryanvi
-http://www.wikidata.org/entity/Q56231,Q56231,Hassaniya Arabic,Hassaniya_Arabic
-http://www.wikidata.org/entity/Q56475,Q56475,Hausa,Hausa
-http://www.wikidata.org/entity/Q33398,Q33398,Hazaragi,Hazaragi
-http://www.wikidata.org/entity/Q9288,Q9288,Hebrew,Hebrew
-http://www.wikidata.org/entity/Q35978,Q35978,Hiligaynon,Hiligaynon
-http://www.wikidata.org/entity/Q382273,Q382273,Hindko,Hindko
-http://www.wikidata.org/entity/Q3307894,Q3307894,Hmong,Hmong
-http://www.wikidata.org/entity/Q33270,Q33270,Ho,Ho
-http://www.wikidata.org/entity/Q56546,Q56546,Huizhou Chinese,Huizhou_Chinese
-http://www.wikidata.org/entity/Q9067,Q9067,Hungarian,Hungarian
-http://www.wikidata.org/entity/Q33424,Q33424,Iban,Iban
-http://www.wikidata.org/entity/Q33578,Q33578,Igbo,Igbo
-http://www.wikidata.org/entity/Q35936,Q35936,Ilocano,Ilocano
-http://www.wikidata.org/entity/Q9240,Q9240,Indonesian,Indonesian
-http://www.wikidata.org/entity/Q3513637,Q3513637,Iranian Persian,Iranian_Persian
-http://www.wikidata.org/entity/Q9142,Q9142,Irish,Irish
-http://www.wikidata.org/entity/Q33417,Q33417,Isan,Isan
-http://www.wikidata.org/entity/Q652,Q652,Italian,Italian
-http://www.wikidata.org/entity/Q35939,Q35939,Jamaican Patois,Jamaican_Patois
-http://www.wikidata.org/entity/Q5287,Q5287,Japanese,Japanese
-http://www.wikidata.org/entity/Q33549,Q33549,Javanese,Javanese
-http://www.wikidata.org/entity/Q56479,Q56479,Jin,Jin
-http://www.wikidata.org/entity/Q36494,Q36494,K’iche’,KaEUR(tm)icheaEUR(tm)
-http://www.wikidata.org/entity/Q33522,Q33522,Kabardian,Kabardian
-http://www.wikidata.org/entity/Q35853,Q35853,Kabyle,Kabyle
-http://www.wikidata.org/entity/Q35379,Q35379,Kam,Kam
-http://www.wikidata.org/entity/Q2574767,Q2574767,Kamba,Kamba
-http://www.wikidata.org/entity/Q33673,Q33673,Kannada,Kannada
-http://www.wikidata.org/entity/Q36094,Q36094,Kanuri,Kanuri
-http://www.wikidata.org/entity/Q36121,Q36121,Kapampangan,Kapampangan
-http://www.wikidata.org/entity/Q3438770,Q3438770,Karai-karai,Karai_karai
-http://www.wikidata.org/entity/Q33720,Q33720,Karay-a,Karay_a
-http://www.wikidata.org/entity/Q1364815,Q1364815,Karenic,Karenic
-http://www.wikidata.org/entity/Q33552,Q33552,Kashmiri,Kashmiri
-http://www.wikidata.org/entity/Q9252,Q9252,Kazakh,Kazakh
-http://www.wikidata.org/entity/Q1199751,Q1199751,Kelantan-Pattani Malay,Kelantan_Pattani_Malay
-http://www.wikidata.org/entity/Q6399808,Q6399808,Khalkha Mongolian,Khalkha_Mongolian
-http://www.wikidata.org/entity/Q56601,Q56601,Khams Tibetan,Khams_Tibetan
-http://www.wikidata.org/entity/Q33726,Q33726,Khandeshi,Khandeshi
-http://www.wikidata.org/entity/Q9205,Q9205,Khmer,Khmer
-http://www.wikidata.org/entity/Q3270727,Q3270727,Kiga,Kiga
-http://www.wikidata.org/entity/Q33573,Q33573,Kinyarwanda,Kinyarwanda
-http://www.wikidata.org/entity/Q33583,Q33583,Kirundi,Kirundi
-http://www.wikidata.org/entity/Q33702,Q33702,Kongo,Kongo
-http://www.wikidata.org/entity/Q6429269,Q6429269,Kongu Tamil,Kongu_Tamil
-http://www.wikidata.org/entity/Q34239,Q34239,Konkani,Konkani
-http://www.wikidata.org/entity/Q9176,Q9176,Korean,Korean
-http://www.wikidata.org/entity/Q33529,Q33529,Kumaoni,Kumaoni
-http://www.wikidata.org/entity/Q36368,Q36368,Kurdish,Kurdish
-http://www.wikidata.org/entity/Q36163,Q36163,Kurmanji,Kurmanji
-http://www.wikidata.org/entity/Q33492,Q33492,Kurukh,Kurukh
-http://www.wikidata.org/entity/Q9255,Q9255,Kyrgyz,Kyrgyz
-http://www.wikidata.org/entity/Q56483,Q56483,Laki,Laki
-http://www.wikidata.org/entity/Q33474,Q33474,Lambadi,Lambadi
-http://www.wikidata.org/entity/Q35670,Q35670,Lango,Lango
-http://www.wikidata.org/entity/Q9211,Q9211,Lao,Lao
-http://www.wikidata.org/entity/Q9078,Q9078,Latvian,Latvian
-http://www.wikidata.org/entity/Q56593,Q56593,Levantine Arabic,Levantine_Arabic
-http://www.wikidata.org/entity/Q56503,Q56503,Libyan Arabic,Libyan_Arabic
-http://www.wikidata.org/entity/Q102172,Q102172,Limburgish,Limburgish
-http://www.wikidata.org/entity/Q36217,Q36217,Lingala,Lingala
-http://www.wikidata.org/entity/Q9083,Q9083,Lithuanian,Lithuanian
-http://www.wikidata.org/entity/Q33754,Q33754,Lombard,Lombard
-http://www.wikidata.org/entity/Q25433,Q25433,Low German,Low_German
-http://www.wikidata.org/entity/Q34173,Q34173,Luba-Kasai,Luba_Kasai
-http://www.wikidata.org/entity/Q33368,Q33368,Luganda,Luganda
-http://www.wikidata.org/entity/Q9296,Q9296,Macedonian,Macedonian
-http://www.wikidata.org/entity/Q36213,Q36213,Madurese,Madurese
-http://www.wikidata.org/entity/Q33728,Q33728,Magahi,Magahi
-http://www.wikidata.org/entity/Q33717,Q33717,Maguindanao,Maguindanao
-http://www.wikidata.org/entity/Q36109,Q36109,Maithili,Maithili
-http://www.wikidata.org/entity/Q33643,Q33643,Makassar,Makassar
-http://www.wikidata.org/entity/Q33882,Q33882,Makhuwa,Makhuwa
-http://www.wikidata.org/entity/Q35172,Q35172,Makonde,Makonde
-http://www.wikidata.org/entity/Q7930,Q7930,Malagasy,Malagasy
-http://www.wikidata.org/entity/Q9237,Q9237,Malay,Malay
-http://www.wikidata.org/entity/Q36236,Q36236,Malayalam,Malayalam
-http://www.wikidata.org/entity/Q15065,Q15065,Malaysian Malay / Malaysian,Malaysian_Malay_/_Malaysian
-http://www.wikidata.org/entity/Q33413,Q33413,Malvi,Malvi
-http://www.wikidata.org/entity/Q2891049,Q2891049,Mandailing Batak,Mandailing_Batak
-http://www.wikidata.org/entity/Q9192,Q9192,Mandarin,Mandarin
-http://www.wikidata.org/entity/Q33678,Q33678,Mandinka,Mandinka
-http://www.wikidata.org/entity/Q36186,Q36186,Maninka,Maninka
-http://www.wikidata.org/entity/Q33730,Q33730,Mapudungun,Mapudungun
-http://www.wikidata.org/entity/Q1571,Q1571,Marathi,Marathi
-http://www.wikidata.org/entity/Q65455884,Q65455884,Marwari,Marwari
-http://www.wikidata.org/entity/Q56312,Q56312,Marwari,Marwari
-http://www.wikidata.org/entity/Q13356,Q13356,Mazanderani,Mazanderani
-http://www.wikidata.org/entity/Q33868,Q33868,Meitei,Meitei
-http://www.wikidata.org/entity/Q11732445,Q11732445,Merwari,Merwari
-http://www.wikidata.org/entity/Q56232,Q56232,Mesopotamian Arabic,Mesopotamian_Arabic
-http://www.wikidata.org/entity/Q2992857,Q2992857,Mewari,Mewari
-http://www.wikidata.org/entity/Q2605943,Q2605943,Mewati,Mewati
-http://www.wikidata.org/entity/Q33813,Q33813,Miao,Miao
-http://www.wikidata.org/entity/Q13324,Q13324,Minangkabau,Minangkabau
-http://www.wikidata.org/entity/Q36510,Q36510,Modern Greek,Modern_Greek
-http://www.wikidata.org/entity/Q9246,Q9246,Mongolian,Mongolian
-http://www.wikidata.org/entity/Q36096,Q36096,Mooré,MoorA(c)
-http://www.wikidata.org/entity/Q56426,Q56426,Moroccan Arabic,Moroccan_Arabic
-http://www.wikidata.org/entity/Q3327828,Q3327828,Mundari,Mundari
-http://www.wikidata.org/entity/Q3236789,Q3236789,Muong,Muong
-http://www.wikidata.org/entity/Q765922,Q765922,Nagpuri,Nagpuri
-http://www.wikidata.org/entity/Q13300,Q13300,Nahuatl,Nahuatl
-http://www.wikidata.org/entity/Q33845,Q33845,Neapolitan,Neapolitan
-http://www.wikidata.org/entity/Q3915909,Q3915909,Negeri Sembilan Malay,Negeri_Sembilan_Malay
-http://www.wikidata.org/entity/Q33823,Q33823,Nepali,Nepali
-http://www.wikidata.org/entity/Q56356571,Q56356571,New Persian,New_Persian
-http://www.wikidata.org/entity/Q36129,Q36129,Nigerian Fulfulde,Nigerian_Fulfulde
-http://www.wikidata.org/entity/Q33655,Q33655,Nigerian Pidgin,Nigerian_Pidgin
-http://www.wikidata.org/entity/Q3502294,Q3502294,Nimadi,Nimadi
-http://www.wikidata.org/entity/Q3515311,Q3515311,North Azerbaijani,North_Azerbaijani
-http://www.wikidata.org/entity/Q22809485,Q22809485,North Levantine Arabic,North_Levantine_Arabic
-http://www.wikidata.org/entity/Q3502234,Q3502234,Northern Khmer,Northern_Khmer
-http://www.wikidata.org/entity/Q19933293,Q19933293,Northern Luri,Northern_Luri
-http://www.wikidata.org/entity/Q36457,Q36457,Northern Min,Northern_Min
-http://www.wikidata.org/entity/Q35613,Q35613,Northern Ndebele,Northern_Ndebele
-http://www.wikidata.org/entity/Q12642194,Q12642194,Northern Pashto,Northern_Pashto
-http://www.wikidata.org/entity/Q33890,Q33890,Northern Sotho,Northern_Sotho
-http://www.wikidata.org/entity/Q565110,Q565110,Northern Thai,Northern_Thai
-http://www.wikidata.org/entity/Q9043,Q9043,Norwegian,Norwegian
-http://www.wikidata.org/entity/Q34235,Q34235,Nuosu,Nuosu
-http://www.wikidata.org/entity/Q33810,Q33810,Odia,Odia
-http://www.wikidata.org/entity/Q33864,Q33864,Oromo,Oromo
-http://www.wikidata.org/entity/Q33879,Q33879,Pangasinan,Pangasinan
-http://www.wikidata.org/entity/Q58680,Q58680,Pashto,Pashto
-http://www.wikidata.org/entity/Q9168,Q9168,Persian,Persian
-http://www.wikidata.org/entity/Q15085,Q15085,Piedmontese,Piedmontese
-http://www.wikidata.org/entity/Q809,Q809,Polish,Polish
-http://www.wikidata.org/entity/Q5146,Q5146,Portuguese,Portuguese
-http://www.wikidata.org/entity/Q56583,Q56583,Pu-Xian Min,Pu_Xian_Min
-http://www.wikidata.org/entity/Q1420205,Q1420205,Pulaar,Pulaar
-http://www.wikidata.org/entity/Q58635,Q58635,Punjabi,Punjabi
-http://www.wikidata.org/entity/Q5218,Q5218,Quechua,Quechua
-http://www.wikidata.org/entity/Q13196,Q13196,Rajasthani,Rajasthani
-http://www.wikidata.org/entity/Q3241177,Q3241177,Rohingya,Rohingya
-http://www.wikidata.org/entity/Q1641543,Q1641543,Romagnol,Romagnol
-http://www.wikidata.org/entity/Q13201,Q13201,Romani,Romani
-http://www.wikidata.org/entity/Q7913,Q7913,Romanian,Romanian
-http://www.wikidata.org/entity/Q13207,Q13207,Runyankole,Runyankole
-http://www.wikidata.org/entity/Q7737,Q7737,Russian,Russian
-http://www.wikidata.org/entity/Q56592,Q56592,Saʽidi Arabic,SaE_1/2idi_Arabic
-http://www.wikidata.org/entity/Q10867404,Q10867404,Sabah Malay,Sabah_Malay
-http://www.wikidata.org/entity/Q6433240,Q6433240,Sambalpuri,Sambalpuri
-http://www.wikidata.org/entity/Q56578,Q56578,Sanʽani Arabic,SanE_1/2ani_Arabic
-http://www.wikidata.org/entity/Q33954,Q33954,Sango,Sango
-http://www.wikidata.org/entity/Q33965,Q33965,Santali,Santali
-http://www.wikidata.org/entity/Q33902,Q33902,Saraiki,Saraiki
-http://www.wikidata.org/entity/Q33976,Q33976,Sardinian,Sardinian
-http://www.wikidata.org/entity/Q1294047,Q1294047,Sasak,Sasak
-http://www.wikidata.org/entity/Q14549,Q14549,Scots,Scots
-http://www.wikidata.org/entity/Q2707343,Q2707343,Sebat Bet Gurage,Sebat_Bet_Gurage
-http://www.wikidata.org/entity/Q9299,Q9299,Serbian,Serbian
-http://www.wikidata.org/entity/Q9301,Q9301,Serbo-Croatian,Serbo_Croatian
-http://www.wikidata.org/entity/Q36284,Q36284,Serer,Serer
-http://www.wikidata.org/entity/Q34340,Q34340,Sesotho,Sesotho
-http://www.wikidata.org/entity/Q56410,Q56410,S'gaw Karen,Sgaw_Karen
-http://www.wikidata.org/entity/Q56482,Q56482,Shan,Shan
-http://www.wikidata.org/entity/Q33274,Q33274,Shawiya,Shawiya
-http://www.wikidata.org/entity/Q36486,Q36486,Shilluk,Shilluk
-http://www.wikidata.org/entity/Q34004,Q34004,Shona,Shona
-http://www.wikidata.org/entity/Q56497,Q56497,Shuwa,Shuwa
-http://www.wikidata.org/entity/Q33973,Q33973,Sicilian,Sicilian
-http://www.wikidata.org/entity/Q33786,Q33786,Sidamo,Sidamo
-http://www.wikidata.org/entity/Q33997,Q33997,Sindhi,Sindhi
-http://www.wikidata.org/entity/Q13267,Q13267,Sinhala,Sinhala
-http://www.wikidata.org/entity/Q9058,Q9058,Slovak,Slovak
-http://www.wikidata.org/entity/Q9063,Q9063,Slovene,Slovene
-http://www.wikidata.org/entity/Q13275,Q13275,Somali,Somali
-http://www.wikidata.org/entity/Q36660,Q36660,Soninke,Soninke
-http://www.wikidata.org/entity/Q36811,Q36811,Sorani,Sorani
-http://www.wikidata.org/entity/Q3449805,Q3449805,South Azerbaijani,South_Azerbaijani
-http://www.wikidata.org/entity/Q1307730,Q1307730,South Bolivian Quechua,South_Bolivian_Quechua
-http://www.wikidata.org/entity/Q55633582,Q55633582,South Levantine Arabic,South_Levantine_Arabic
-http://www.wikidata.org/entity/Q1496597,Q1496597,Southern Kurdish,Southern_Kurdish
-http://www.wikidata.org/entity/Q36495,Q36495,Southern Min,Southern_Min
-http://www.wikidata.org/entity/Q16112855,Q16112855,Southern Pashto,Southern_Pashto
-http://www.wikidata.org/entity/Q56508,Q56508,Southern Thai,Southern_Thai
-http://www.wikidata.org/entity/Q1066787,Q1066787,Southern Uzbek,Southern_Uzbek
-http://www.wikidata.org/entity/Q1321,Q1321,Spanish,Spanish
-http://www.wikidata.org/entity/Q727694,Q727694,Standard Chinese,Standard_Chinese
-http://www.wikidata.org/entity/Q12361545,Q12361545,Standard Estonian,Standard_Estonian
-http://www.wikidata.org/entity/Q110620923,Q110620923,Standard Indonesian,Standard_Indonesian
-http://www.wikidata.org/entity/Q17993025,Q17993025,Standard Persian,Standard_Persian
-http://www.wikidata.org/entity/Q56573,Q56573,Sudanese Arabic,Sudanese_Arabic
-http://www.wikidata.org/entity/Q2638144,Q2638144,Sukuma,Sukuma
-http://www.wikidata.org/entity/Q34002,Q34002,Sundanese,Sundanese
-http://www.wikidata.org/entity/Q33990,Q33990,Susu,Susu
-http://www.wikidata.org/entity/Q7838,Q7838,Swahili,Swahili
-http://www.wikidata.org/entity/Q3197533,Q3197533,Swahili,Swahili
-http://www.wikidata.org/entity/Q34014,Q34014,Swazi,Swazi
-http://www.wikidata.org/entity/Q9027,Q9027,Swedish,Swedish
-http://www.wikidata.org/entity/Q387066,Q387066,Swiss German,Swiss_German
-http://www.wikidata.org/entity/Q2044560,Q2044560,Sylheti,Sylheti
-http://www.wikidata.org/entity/Q2511476,Q2511476,Tày,TA_y
-http://www.wikidata.org/entity/Q56579,Q56579,Taʽizzi-Adeni Arabic,TaE_1/2izzi_Adeni_Arabic
-http://www.wikidata.org/entity/Q34152,Q34152,Tachelhit,Tachelhit
-http://www.wikidata.org/entity/Q34057,Q34057,Tagalog,Tagalog
-http://www.wikidata.org/entity/Q9260,Q9260,Tajik,Tajik
-http://www.wikidata.org/entity/Q5885,Q5885,Tamil,Tamil
-http://www.wikidata.org/entity/Q34174,Q34174,Tarifit,Tarifit
-http://www.wikidata.org/entity/Q25285,Q25285,Tatar,Tatar
-http://www.wikidata.org/entity/Q34142,Q34142,Tausug,Tausug
-http://www.wikidata.org/entity/Q8097,Q8097,Telugu,Telugu
-http://www.wikidata.org/entity/Q9217,Q9217,Thai,Thai
-http://www.wikidata.org/entity/Q34271,Q34271,Tibetan,Tibetan
-http://www.wikidata.org/entity/Q34124,Q34124,Tigrinya,Tigrinya
-http://www.wikidata.org/entity/Q33017,Q33017,Toba Batak,Toba_Batak
-http://www.wikidata.org/entity/Q34159,Q34159,Tok Pisin,Tok_Pisin
-http://www.wikidata.org/entity/Q34101,Q34101,Tonga,Tonga
-http://www.wikidata.org/entity/Q180937,Q180937,Tosk,Tosk
-http://www.wikidata.org/entity/Q34327,Q34327,Tsonga,Tsonga
-http://www.wikidata.org/entity/Q2085051,Q2085051,Tswa,Tswa
-http://www.wikidata.org/entity/Q34137,Q34137,Tswana,Tswana
-http://www.wikidata.org/entity/Q34065,Q34065,Tuareg,Tuareg
-http://www.wikidata.org/entity/Q34251,Q34251,Tulu,Tulu
-http://www.wikidata.org/entity/Q34138,Q34138,Tumbuka,Tumbuka
-http://www.wikidata.org/entity/Q56240,Q56240,Tunisian Arabic,Tunisian_Arabic
-http://www.wikidata.org/entity/Q256,Q256,Turkish,Turkish
-http://www.wikidata.org/entity/Q9267,Q9267,Turkmen,Turkmen
-http://www.wikidata.org/entity/Q36850,Q36850,Twi,Twi
-http://www.wikidata.org/entity/Q8798,Q8798,Ukrainian,Ukrainian
-http://www.wikidata.org/entity/Q36983,Q36983,Umbundu,Umbundu
-http://www.wikidata.org/entity/Q699284,Q699284,Upper Saxon,Upper_Saxon
-http://www.wikidata.org/entity/Q36663,Q36663,Urhobo,Urhobo
-http://www.wikidata.org/entity/Q13263,Q13263,Uyghur,Uyghur
-http://www.wikidata.org/entity/Q9264,Q9264,Uzbek,Uzbek
-http://www.wikidata.org/entity/Q32641,Q32641,Valencian,Valencian
-http://www.wikidata.org/entity/Q32704,Q32704,Venda,Venda
-http://www.wikidata.org/entity/Q32724,Q32724,Venetian,Venetian
-http://www.wikidata.org/entity/Q9199,Q9199,Vietnamese,Vietnamese
-http://www.wikidata.org/entity/Q34279,Q34279,Waray,Waray
-http://www.wikidata.org/entity/Q100103,Q100103,West Flemish,West_Flemish
-http://www.wikidata.org/entity/Q168446,Q168446,West Low German,West_Low_German
-http://www.wikidata.org/entity/Q180945,Q180945,Western Armenian,Western_Armenian
-http://www.wikidata.org/entity/Q36943,Q36943,Wolayttattuwa,Wolayttattuwa
-http://www.wikidata.org/entity/Q34257,Q34257,Wolof,Wolof
-http://www.wikidata.org/entity/Q34290,Q34290,Wu Chinese,Wu_Chinese
-http://www.wikidata.org/entity/Q13218,Q13218,Xhosa,Xhosa
-http://www.wikidata.org/entity/Q13220,Q13220,Xiang Chinese,Xiang_Chinese
-http://www.wikidata.org/entity/Q8054983,Q8054983,Yongbei Zhuang,Yongbei_Zhuang
-http://www.wikidata.org/entity/Q34311,Q34311,Yoruba,Yoruba
-http://www.wikidata.org/entity/Q7033959,Q7033959,Yue Chinese,Yue_Chinese
-http://www.wikidata.org/entity/Q10199,Q10199,Zazaki,Zazaki
-http://www.wikidata.org/entity/Q13216,Q13216,Zhuang,Zhuang
-http://www.wikidata.org/entity/Q10179,Q10179,Zulu,Zulu
+language,entity id,languageLabel,function name
+http://www.wikidata.org/entity/Q9260,Q9260,Tajik,Tajik
+http://www.wikidata.org/entity/Q33491,Q33491,Haitian Creole,Haitian_Creole
+http://www.wikidata.org/entity/Q33655,Q33655,Nigerian Pidgin,Nigerian_Pidgin
+http://www.wikidata.org/entity/Q33954,Q33954,Sango,Sango
+http://www.wikidata.org/entity/Q110620923,Q110620923,Standard Indonesian,Standard_Indonesian
+http://www.wikidata.org/entity/Q34159,Q34159,Tok Pisin,Tok_Pisin
+http://www.wikidata.org/entity/Q35541,Q35541,Cameroon Pidgin,Cameroon_Pidgin
+http://www.wikidata.org/entity/Q35939,Q35939,Jamaican Patois,Jamaican_Patois
+http://www.wikidata.org/entity/Q143,Q143,Esperanto,Esperanto
+http://www.wikidata.org/entity/Q150,Q150,French,French
+http://www.wikidata.org/entity/Q56323,Q56323,Gamo-Gofa-Dawro,Gamo_Gofa_Dawro
+http://www.wikidata.org/entity/Q56410,Q56410,S'gaw Karen,Sgaw_Karen
+http://www.wikidata.org/entity/Q56466,Q56466,Dinka,Dinka
+http://www.wikidata.org/entity/Q56426,Q56426,Moroccan Arabic,Moroccan_Arabic
+http://www.wikidata.org/entity/Q56503,Q56503,Libyan Arabic,Libyan_Arabic
+http://www.wikidata.org/entity/Q56508,Q56508,Southern Thai,Southern_Thai
+http://www.wikidata.org/entity/Q56483,Q56483,Laki,Laki
+http://www.wikidata.org/entity/Q56479,Q56479,Jin,Jin
+http://www.wikidata.org/entity/Q8108,Q8108,Georgian,Georgian
+http://www.wikidata.org/entity/Q9240,Q9240,Indonesian,Indonesian
+http://www.wikidata.org/entity/Q256,Q256,Turkish,Turkish
+http://www.wikidata.org/entity/Q33475,Q33475,Gan Chinese,Gan_Chinese
+http://www.wikidata.org/entity/Q33474,Q33474,Lambadi,Lambadi
+http://www.wikidata.org/entity/Q35147,Q35147,Cusco Quechua,Cusco_Quechua
+http://www.wikidata.org/entity/Q15065,Q15065,Malaysian Malay / Malaysian,Malaysian_Malay_/_Malaysian
+http://www.wikidata.org/entity/Q35159,Q35159,Dagaare,Dagaare
+http://www.wikidata.org/entity/Q35107,Q35107,Baoulé,Baoule
+http://www.wikidata.org/entity/Q35100,Q35100,Bouyei,Bouyei
+http://www.wikidata.org/entity/Q33454,Q33454,Fula,Fula
+http://www.wikidata.org/entity/Q33459,Q33459,Garhwali,Garhwali
+http://www.wikidata.org/entity/Q9301,Q9301,Serbo-Croatian,Serbo_Croatian
+http://www.wikidata.org/entity/Q652,Q652,Italian,Italian
+http://www.wikidata.org/entity/Q809,Q809,Polish,Polish
+http://www.wikidata.org/entity/Q56601,Q56601,Khams Tibetan,Khams_Tibetan
+http://www.wikidata.org/entity/Q56593,Q56593,Levantine Arabic,Levantine_Arabic
+http://www.wikidata.org/entity/Q1321,Q1321,Spanish,Spanish
+http://www.wikidata.org/entity/Q56583,Q56583,Pu-Xian Min,Pu_Xian_Min
+http://www.wikidata.org/entity/Q56592,Q56592,Saʽidi Arabic,Saidi_Arabic
+http://www.wikidata.org/entity/Q56546,Q56546,Huizhou Chinese,Huizhou_Chinese
+http://www.wikidata.org/entity/Q33522,Q33522,Kabardian,Kabardian
+http://www.wikidata.org/entity/Q727694,Q727694,Standard Chinese,Standard_Chinese
+http://www.wikidata.org/entity/Q35172,Q35172,Makonde,Makonde
+http://www.wikidata.org/entity/Q9237,Q9237,Malay,Malay
+http://www.wikidata.org/entity/Q33549,Q33549,Javanese,Javanese
+http://www.wikidata.org/entity/Q33529,Q33529,Kumaoni,Kumaoni
+http://www.wikidata.org/entity/Q1860,Q1860,English,English
+http://www.wikidata.org/entity/Q33902,Q33902,Saraiki,Saraiki
+http://www.wikidata.org/entity/Q33965,Q33965,Santali,Santali
+http://www.wikidata.org/entity/Q5218,Q5218,Quechua,Quechua
+http://www.wikidata.org/entity/Q33730,Q33730,Mapudungun,Mapudungun
+http://www.wikidata.org/entity/Q33673,Q33673,Kannada,Kannada
+http://www.wikidata.org/entity/Q7737,Q7737,Russian,Russian
+http://www.wikidata.org/entity/Q33552,Q33552,Kashmiri,Kashmiri
+http://www.wikidata.org/entity/Q33997,Q33997,Sindhi,Sindhi
+http://www.wikidata.org/entity/Q1412,Q1412,Finnish,Finnish
+http://www.wikidata.org/entity/Q33973,Q33973,Sicilian,Sicilian
+http://www.wikidata.org/entity/Q5287,Q5287,Japanese,Japanese
+http://www.wikidata.org/entity/Q33678,Q33678,Mandinka,Mandinka
+http://www.wikidata.org/entity/Q33823,Q33823,Nepali,Nepali
+http://www.wikidata.org/entity/Q33786,Q33786,Sidamo,Sidamo
+http://www.wikidata.org/entity/Q33573,Q33573,Kinyarwanda,Kinyarwanda
+http://www.wikidata.org/entity/Q33702,Q33702,Kongo,Kongo
+http://www.wikidata.org/entity/Q33726,Q33726,Khandeshi,Khandeshi
+http://www.wikidata.org/entity/Q34138,Q34138,Tumbuka,Tumbuka
+http://www.wikidata.org/entity/Q34002,Q34002,Sundanese,Sundanese
+http://www.wikidata.org/entity/Q4627,Q4627,Aymara,Aymara
+http://www.wikidata.org/entity/Q8097,Q8097,Telugu,Telugu
+http://www.wikidata.org/entity/Q34152,Q34152,Tachelhit,Tachelhit
+http://www.wikidata.org/entity/Q34239,Q34239,Konkani,Konkani
+http://www.wikidata.org/entity/Q34057,Q34057,Tagalog,Tagalog
+http://www.wikidata.org/entity/Q33583,Q33583,Kirundi,Kirundi
+http://www.wikidata.org/entity/Q7838,Q7838,Swahili,Swahili
+http://www.wikidata.org/entity/Q1571,Q1571,Marathi,Marathi
+http://www.wikidata.org/entity/Q33882,Q33882,Makhuwa,Makhuwa
+http://www.wikidata.org/entity/Q33879,Q33879,Pangasinan,Pangasinan
+http://www.wikidata.org/entity/Q35936,Q35936,Ilocano,Ilocano
+http://www.wikidata.org/entity/Q5137,Q5137,Gujarati,Gujarati
+http://www.wikidata.org/entity/Q7411,Q7411,Dutch,Dutch
+http://www.wikidata.org/entity/Q33587,Q33587,Gikuyu,Gikuyu
+http://www.wikidata.org/entity/Q33728,Q33728,Magahi,Magahi
+http://www.wikidata.org/entity/Q5885,Q5885,Tamil,Tamil
+http://www.wikidata.org/entity/Q7913,Q7913,Romanian,Romanian
+http://www.wikidata.org/entity/Q34311,Q34311,Yoruba,Yoruba
+http://www.wikidata.org/entity/Q34251,Q34251,Tulu,Tulu
+http://www.wikidata.org/entity/Q34142,Q34142,Tausug,Tausug
+http://www.wikidata.org/entity/Q8748,Q8748,Albanian,Albanian
+http://www.wikidata.org/entity/Q36096,Q36096,Mooré,Moore
+http://www.wikidata.org/entity/Q36457,Q36457,Northern Min,Northern_Min
+http://www.wikidata.org/entity/Q36455,Q36455,Eastern Min,Eastern_Min
+http://www.wikidata.org/entity/Q34340,Q34340,Sesotho,Sesotho
+http://www.wikidata.org/entity/Q7976,Q7976,American English,American_English
+http://www.wikidata.org/entity/Q34926,Q34926,Acholi,Acholi
+http://www.wikidata.org/entity/Q36943,Q36943,Wolayttattuwa,Wolayttattuwa
+http://www.wikidata.org/entity/Q36983,Q36983,Umbundu,Umbundu
+http://www.wikidata.org/entity/Q34004,Q34004,Shona,Shona
+http://www.wikidata.org/entity/Q36494,Q36494,K’iche’,Kiche
+http://www.wikidata.org/entity/Q36486,Q36486,Shilluk,Shilluk
+http://www.wikidata.org/entity/Q36495,Q36495,Southern Min,Southern_Min
+http://www.wikidata.org/entity/Q131339,Q131339,Alemannic,Alemannic
+http://www.wikidata.org/entity/Q102172,Q102172,Limburgish,Limburgish
+http://www.wikidata.org/entity/Q8785,Q8785,Armenian,Armenian
+http://www.wikidata.org/entity/Q35613,Q35613,Northern Ndebele,Northern_Ndebele
+http://www.wikidata.org/entity/Q35394,Q35394,Domari,Domari
+http://www.wikidata.org/entity/Q8798,Q8798,Ukrainian,Ukrainian
+http://www.wikidata.org/entity/Q35670,Q35670,Lango,Lango
+http://www.wikidata.org/entity/Q35853,Q35853,Kabyle,Kabyle
+http://www.wikidata.org/entity/Q36510,Q36510,Modern Greek,Modern_Greek
+http://www.wikidata.org/entity/Q36663,Q36663,Urhobo,Urhobo
+http://www.wikidata.org/entity/Q36660,Q36660,Soninke,Soninke
+http://www.wikidata.org/entity/Q168446,Q168446,West Low German,West_Low_German
+http://www.wikidata.org/entity/Q56497,Q56497,Shuwa,Shuwa
+http://www.wikidata.org/entity/Q56499,Q56499,Algerian Arabic,Algerian_Arabic
+http://www.wikidata.org/entity/Q2707343,Q2707343,Sebat Bet Gurage,Sebat_Bet_Gurage
+http://www.wikidata.org/entity/Q2891049,Q2891049,Mandailing Batak,Mandailing_Batak
+http://www.wikidata.org/entity/Q34327,Q34327,Tsonga,Tsonga
+http://www.wikidata.org/entity/Q58635,Q58635,Punjabi,Punjabi
+http://www.wikidata.org/entity/Q34257,Q34257,Wolof,Wolof
+http://www.wikidata.org/entity/Q36109,Q36109,Maithili,Maithili
+http://www.wikidata.org/entity/Q34271,Q34271,Tibetan,Tibetan
+http://www.wikidata.org/entity/Q56240,Q56240,Tunisian Arabic,Tunisian_Arabic
+http://www.wikidata.org/entity/Q56232,Q56232,Mesopotamian Arabic,Mesopotamian_Arabic
+http://www.wikidata.org/entity/Q2574767,Q2574767,Kamba,Kamba
+http://www.wikidata.org/entity/Q2638144,Q2638144,Sukuma,Sukuma
+http://www.wikidata.org/entity/Q2605943,Q2605943,Mewati,Mewati
+http://www.wikidata.org/entity/Q56579,Q56579,Taʽizzi-Adeni Arabic,Taizzi_Adeni_Arabic
+http://www.wikidata.org/entity/Q56578,Q56578,Sanʽani Arabic,Sanani_Arabic
+http://www.wikidata.org/entity/Q56573,Q56573,Sudanese Arabic,Sudanese_Arabic
+http://www.wikidata.org/entity/Q36850,Q36850,Twi,Twi
+http://www.wikidata.org/entity/Q36811,Q36811,Sorani,Sorani
+http://www.wikidata.org/entity/Q699284,Q699284,Upper Saxon,Upper_Saxon
+http://www.wikidata.org/entity/Q669431,Q669431,Daknī,Dakni
+http://www.wikidata.org/entity/Q36163,Q36163,Kurmanji,Kurmanji
+http://www.wikidata.org/entity/Q36213,Q36213,Madurese,Madurese
+http://www.wikidata.org/entity/Q36129,Q36129,Nigerian Fulfulde,Nigerian_Fulfulde
+http://www.wikidata.org/entity/Q36121,Q36121,Kapampangan,Kapampangan
+http://www.wikidata.org/entity/Q36186,Q36186,Maninka,Maninka
+http://www.wikidata.org/entity/Q34831,Q34831,Bonol,Bonol
+http://www.wikidata.org/entity/Q35035,Q35035,Adja,Adja
+http://www.wikidata.org/entity/Q35978,Q35978,Hiligaynon,Hiligaynon
+http://www.wikidata.org/entity/Q1057898,Q1057898,Emilian,Emilian
+http://www.wikidata.org/entity/Q1199751,Q1199751,Kelantan-Pattani Malay,Kelantan_Pattani_Malay
+http://www.wikidata.org/entity/Q1294047,Q1294047,Sasak,Sasak
+http://www.wikidata.org/entity/Q180945,Q180945,Western Armenian,Western_Armenian
+http://www.wikidata.org/entity/Q49741,Q49741,Central Atlas Tamazight,Central_Atlas_Tamazight
+http://www.wikidata.org/entity/Q56231,Q56231,Hassaniya Arabic,Hassaniya_Arabic
+http://www.wikidata.org/entity/Q7930,Q7930,Malagasy,Malagasy
+http://www.wikidata.org/entity/Q36368,Q36368,Kurdish,Kurdish
+http://www.wikidata.org/entity/Q36284,Q36284,Serer,Serer
+http://www.wikidata.org/entity/Q934541,Q934541,Hainanese,Hainanese
+http://www.wikidata.org/entity/Q56482,Q56482,Shan,Shan
+http://www.wikidata.org/entity/Q56475,Q56475,Hausa,Hausa
+http://www.wikidata.org/entity/Q1307730,Q1307730,South Bolivian Quechua,South_Bolivian_Quechua
+http://www.wikidata.org/entity/Q1364815,Q1364815,Karenic,Karenic
+http://www.wikidata.org/entity/Q1420205,Q1420205,Pulaar,Pulaar
+http://www.wikidata.org/entity/Q306626,Q306626,Austrian German,Austrian_German
+http://www.wikidata.org/entity/Q242648,Q242648,Emilian–Romagnol,Emilian_Romagnol
+http://www.wikidata.org/entity/Q1641543,Q1641543,Romagnol,Romagnol
+http://www.wikidata.org/entity/Q2085051,Q2085051,Tswa,Tswa
+http://www.wikidata.org/entity/Q1496597,Q1496597,Southern Kurdish,Southern_Kurdish
+http://www.wikidata.org/entity/Q9035,Q9035,Danish,Danish
+http://www.wikidata.org/entity/Q765922,Q765922,Nagpuri,Nagpuri
+http://www.wikidata.org/entity/Q633359,Q633359,Dhundari,Dhundari
+http://www.wikidata.org/entity/Q33417,Q33417,Isan,Isan
+http://www.wikidata.org/entity/Q33410,Q33410,Haryanvi,Haryanvi
+http://www.wikidata.org/entity/Q33413,Q33413,Malvi,Malvi
+http://www.wikidata.org/entity/Q100103,Q100103,West Flemish,West_Flemish
+http://www.wikidata.org/entity/Q36236,Q36236,Malayalam,Malayalam
+http://www.wikidata.org/entity/Q58680,Q58680,Pashto,Pashto
+http://www.wikidata.org/entity/Q35375,Q35375,Edo,Edo
+http://www.wikidata.org/entity/Q9067,Q9067,Hungarian,Hungarian
+http://www.wikidata.org/entity/Q9063,Q9063,Slovene,Slovene
+http://www.wikidata.org/entity/Q178440,Q178440,Dari,Dari
+http://www.wikidata.org/entity/Q2426319,Q2426319,Bagri,Bagri
+http://www.wikidata.org/entity/Q2356364,Q2356364,Bagheli,Bagheli
+http://www.wikidata.org/entity/Q2511476,Q2511476,Tày,Tay
+http://www.wikidata.org/entity/Q188,Q188,German,German
+http://www.wikidata.org/entity/Q36217,Q36217,Lingala,Lingala
+http://www.wikidata.org/entity/Q33424,Q33424,Iban,Iban
+http://www.wikidata.org/entity/Q33492,Q33492,Kurukh,Kurukh
+http://www.wikidata.org/entity/Q9176,Q9176,Korean,Korean
+http://www.wikidata.org/entity/Q19933293,Q19933293,Northern Luri,Northern_Luri
+http://www.wikidata.org/entity/Q3510366,Q3510366,Hadhrami Arabic,Hadhrami_Arabic
+http://www.wikidata.org/entity/Q3515311,Q3515311,North Azerbaijani,North_Azerbaijani
+http://www.wikidata.org/entity/Q3438770,Q3438770,Karai-karai,Karai_karai
+http://www.wikidata.org/entity/Q56356571,Q56356571,New Persian,New_Persian
+http://www.wikidata.org/entity/Q9129,Q9129,Greek,Greek
+http://www.wikidata.org/entity/Q3307894,Q3307894,Hmong,Hmong
+http://www.wikidata.org/entity/Q3327828,Q3327828,Mundari,Mundari
+http://www.wikidata.org/entity/Q3502294,Q3502294,Nimadi,Nimadi
+http://www.wikidata.org/entity/Q3513637,Q3513637,Iranian Persian,Iranian_Persian
+http://www.wikidata.org/entity/Q3502234,Q3502234,Northern Khmer,Northern_Khmer
+http://www.wikidata.org/entity/Q9072,Q9072,Estonian,Estonian
+http://www.wikidata.org/entity/Q565110,Q565110,Northern Thai,Northern_Thai
+http://www.wikidata.org/entity/Q382273,Q382273,Hindko,Hindko
+http://www.wikidata.org/entity/Q387066,Q387066,Swiss German,Swiss_German
+http://www.wikidata.org/entity/Q9056,Q9056,Czech,Czech
+http://www.wikidata.org/entity/Q35379,Q35379,Kam,Kam
+http://www.wikidata.org/entity/Q35377,Q35377,Efik,Efik
+http://www.wikidata.org/entity/Q9142,Q9142,Irish,Irish
+http://www.wikidata.org/entity/Q9168,Q9168,Persian,Persian
+http://www.wikidata.org/entity/Q1775361,Q1775361,Gondi,Gondi
+http://www.wikidata.org/entity/Q2044560,Q2044560,Sylheti,Sylheti
+http://www.wikidata.org/entity/Q1066787,Q1066787,Southern Uzbek,Southern_Uzbek
+http://www.wikidata.org/entity/Q9186,Q9186,Cantonese,Cantonese
+http://www.wikidata.org/entity/Q3111668,Q3111668,Gun,Gun
+http://www.wikidata.org/entity/Q2992857,Q2992857,Mewari,Mewari
+http://www.wikidata.org/entity/Q3241177,Q3241177,Rohingya,Rohingya
+http://www.wikidata.org/entity/Q9199,Q9199,Vietnamese,Vietnamese
+http://www.wikidata.org/entity/Q7918,Q7918,Bulgarian,Bulgarian
+http://www.wikidata.org/entity/Q5146,Q5146,Portuguese,Portuguese
+http://www.wikidata.org/entity/Q33578,Q33578,Igbo,Igbo
+http://www.wikidata.org/entity/Q3197533,Q3197533,Swahili,Swahili
+http://www.wikidata.org/entity/Q3236789,Q3236789,Muong,Muong
+http://www.wikidata.org/entity/Q9217,Q9217,Thai,Thai
+http://www.wikidata.org/entity/Q3270727,Q3270727,Kiga,Kiga
+http://www.wikidata.org/entity/Q3244184,Q3244184,Antiguan and Barbudan Creole,Antiguan_and_Barbudan_Creole
+http://www.wikidata.org/entity/Q7026,Q7026,Catalan,Catalan
+http://www.wikidata.org/entity/Q33643,Q33643,Makassar,Makassar
+http://www.wikidata.org/entity/Q9228,Q9228,Burmese,Burmese
+http://www.wikidata.org/entity/Q3436689,Q3436689,Brazilian Sign Language,Brazilian_Sign_Language
+http://www.wikidata.org/entity/Q33657,Q33657,Gilaki,Gilaki
+http://www.wikidata.org/entity/Q8786,Q8786,Alsatian,Alsatian
+http://www.wikidata.org/entity/Q33717,Q33717,Maguindanao,Maguindanao
+http://www.wikidata.org/entity/Q33720,Q33720,Karay-a,Karay_a
+http://www.wikidata.org/entity/Q33868,Q33868,Meitei,Meitei
+http://www.wikidata.org/entity/Q9246,Q9246,Mongolian,Mongolian
+http://www.wikidata.org/entity/Q33864,Q33864,Oromo,Oromo
+http://www.wikidata.org/entity/Q6433240,Q6433240,Sambalpuri,Sambalpuri
+http://www.wikidata.org/entity/Q8054983,Q8054983,Yongbei Zhuang,Yongbei_Zhuang
+http://www.wikidata.org/entity/Q12953177,Q12953177,Eastern Tamang,Eastern_Tamang
+http://www.wikidata.org/entity/Q10961696,Q10961696,Congo Swahili,Congo_Swahili
+http://www.wikidata.org/entity/Q33754,Q33754,Lombard,Lombard
+http://www.wikidata.org/entity/Q9058,Q9058,Slovak,Slovak
+http://www.wikidata.org/entity/Q9252,Q9252,Kazakh,Kazakh
+http://www.wikidata.org/entity/Q9267,Q9267,Turkmen,Turkmen
+http://www.wikidata.org/entity/Q3449805,Q3449805,South Azerbaijani,South_Azerbaijani
+http://www.wikidata.org/entity/Q5414796,Q5414796,Dholuo,Dholuo
+http://www.wikidata.org/entity/Q5575236,Q5575236,Goan Konkani,Goan_Konkani
+http://www.wikidata.org/entity/Q6429269,Q6429269,Kongu Tamil,Kongu_Tamil
+http://www.wikidata.org/entity/Q5555465,Q5555465,Ghanaian Pidgin English,Ghanaian_Pidgin_English
+http://www.wikidata.org/entity/Q6399808,Q6399808,Khalkha Mongolian,Khalkha_Mongolian
+http://www.wikidata.org/entity/Q11732445,Q11732445,Merwari,Merwari
+http://www.wikidata.org/entity/Q7033959,Q7033959,Yue Chinese,Yue_Chinese
+http://www.wikidata.org/entity/Q5061628,Q5061628,Central Pashto,Central_Pashto
+http://www.wikidata.org/entity/Q3915909,Q3915909,Negeri Sembilan Malay,Negeri_Sembilan_Malay
+http://www.wikidata.org/entity/Q33810,Q33810,Odia,Odia
+http://www.wikidata.org/entity/Q9091,Q9091,Belarusian,Belarusian
+http://www.wikidata.org/entity/Q33890,Q33890,Northern Sotho,Northern_Sotho
+http://www.wikidata.org/entity/Q9083,Q9083,Lithuanian,Lithuanian
+http://www.wikidata.org/entity/Q9027,Q9027,Swedish,Swedish
+http://www.wikidata.org/entity/Q9255,Q9255,Kyrgyz,Kyrgyz
+http://www.wikidata.org/entity/Q9292,Q9292,Azerbaijani,Azerbaijani
+http://www.wikidata.org/entity/Q9264,Q9264,Uzbek,Uzbek
+http://www.wikidata.org/entity/Q9078,Q9078,Latvian,Latvian
+http://www.wikidata.org/entity/Q9288,Q9288,Hebrew,Hebrew
+http://www.wikidata.org/entity/Q33976,Q33976,Sardinian,Sardinian
+http://www.wikidata.org/entity/Q33845,Q33845,Neapolitan,Neapolitan
+http://www.wikidata.org/entity/Q9043,Q9043,Norwegian,Norwegian
+http://www.wikidata.org/entity/Q9192,Q9192,Mandarin,Mandarin
+http://www.wikidata.org/entity/Q9211,Q9211,Lao,Lao
+http://www.wikidata.org/entity/Q9205,Q9205,Khmer,Khmer
+http://www.wikidata.org/entity/Q12361545,Q12361545,Standard Estonian,Standard_Estonian
+http://www.wikidata.org/entity/Q34014,Q34014,Swazi,Swazi
+http://www.wikidata.org/entity/Q34137,Q34137,Tswana,Tswana
+http://www.wikidata.org/entity/Q13220,Q13220,Xiang Chinese,Xiang_Chinese
+http://www.wikidata.org/entity/Q13263,Q13263,Uyghur,Uyghur
+http://www.wikidata.org/entity/Q13218,Q13218,Xhosa,Xhosa
+http://www.wikidata.org/entity/Q33990,Q33990,Susu,Susu
+http://www.wikidata.org/entity/Q13216,Q13216,Zhuang,Zhuang
+http://www.wikidata.org/entity/Q13207,Q13207,Runyankole,Runyankole
+http://www.wikidata.org/entity/Q9610,Q9610,Bangla,Bangla
+http://www.wikidata.org/entity/Q13201,Q13201,Romani,Romani
+http://www.wikidata.org/entity/Q6654,Q6654,Croatian,Croatian
+http://www.wikidata.org/entity/Q34174,Q34174,Tarifit,Tarifit
+http://www.wikidata.org/entity/Q34173,Q34173,Luba-Kasai,Luba_Kasai
+http://www.wikidata.org/entity/Q34101,Q34101,Tonga,Tonga
+http://www.wikidata.org/entity/Q34065,Q34065,Tuareg,Tuareg
+http://www.wikidata.org/entity/Q13267,Q13267,Sinhala,Sinhala
+http://www.wikidata.org/entity/Q9296,Q9296,Macedonian,Macedonian
+http://www.wikidata.org/entity/Q9299,Q9299,Serbian,Serbian
+http://www.wikidata.org/entity/Q34124,Q34124,Tigrinya,Tigrinya
+http://www.wikidata.org/entity/Q34235,Q34235,Nuosu,Nuosu
+http://www.wikidata.org/entity/Q13324,Q13324,Minangkabau,Minangkabau
+http://www.wikidata.org/entity/Q34279,Q34279,Waray,Waray
+http://www.wikidata.org/entity/Q13389,Q13389,Bashkir,Bashkir
+http://www.wikidata.org/entity/Q10199,Q10199,Zazaki,Zazaki
+http://www.wikidata.org/entity/Q29401,Q29401,Assamese,Assamese
+http://www.wikidata.org/entity/Q13356,Q13356,Mazanderani,Mazanderani
+http://www.wikidata.org/entity/Q10179,Q10179,Zulu,Zulu
+http://www.wikidata.org/entity/Q25433,Q25433,Low German,Low_German
+http://www.wikidata.org/entity/Q14549,Q14549,Scots,Scots
+http://www.wikidata.org/entity/Q13955,Q13955,Arabic,Arabic
+http://www.wikidata.org/entity/Q14196,Q14196,Afrikaans,Afrikaans
+http://www.wikidata.org/entity/Q30005,Q30005,Ewe,Ewe
+http://www.wikidata.org/entity/Q13275,Q13275,Somali,Somali
+http://www.wikidata.org/entity/Q25285,Q25285,Tatar,Tatar
+http://www.wikidata.org/entity/Q7850,Q7850,Chinese,Chinese
+http://www.wikidata.org/entity/Q27683,Q27683,Acehnese,Acehnese
+http://www.wikidata.org/entity/Q34290,Q34290,Wu Chinese,Wu_Chinese
+http://www.wikidata.org/entity/Q32704,Q32704,Venda,Venda
+http://www.wikidata.org/entity/Q32730,Q32730,Dogri,Dogri
+http://www.wikidata.org/entity/Q29919,Q29919,Egyptian Arabic,Egyptian_Arabic
+http://www.wikidata.org/entity/Q33017,Q33017,Toba Batak,Toba_Batak
+http://www.wikidata.org/entity/Q13300,Q13300,Nahuatl,Nahuatl
+http://www.wikidata.org/entity/Q13196,Q13196,Rajasthani,Rajasthani
+http://www.wikidata.org/entity/Q33049,Q33049,Balochi,Balochi
+http://www.wikidata.org/entity/Q27811,Q27811,Afar,Afar
+http://www.wikidata.org/entity/Q28244,Q28244,Amharic,Amharic
+http://www.wikidata.org/entity/Q9307,Q9307,Galician,Galician
+http://www.wikidata.org/entity/Q32641,Q32641,Valencian,Valencian
+http://www.wikidata.org/entity/Q32238,Q32238,Dagbani,Dagbani
+http://www.wikidata.org/entity/Q33158,Q33158,Chhattisgarhi,Chhattisgarhi
+http://www.wikidata.org/entity/Q33190,Q33190,Bugis,Bugis
+http://www.wikidata.org/entity/Q33151,Q33151,Banjar,Banjar
+http://www.wikidata.org/entity/Q15085,Q15085,Piedmontese,Piedmontese
+http://www.wikidata.org/entity/Q33070,Q33070,Balinese,Balinese
+http://www.wikidata.org/entity/Q33273,Q33273,Chewa,Chewa
+http://www.wikidata.org/entity/Q32724,Q32724,Venetian,Venetian
+http://www.wikidata.org/entity/Q33202,Q33202,Brahui,Brahui
+http://www.wikidata.org/entity/Q33350,Q33350,Chechen,Chechen
+http://www.wikidata.org/entity/Q29540,Q29540,Bavarian,Bavarian
+http://www.wikidata.org/entity/Q33268,Q33268,Bhojpuri,Bhojpuri
+http://www.wikidata.org/entity/Q33229,Q33229,Bhili,Bhili
+http://www.wikidata.org/entity/Q28026,Q28026,Akan,Akan
+http://www.wikidata.org/entity/Q25167,Q25167,Bokmål,Bokmal
+http://www.wikidata.org/entity/Q33223,Q33223,Bodo,Bodo
+http://www.wikidata.org/entity/Q33025,Q33025,Beja,Beja
+http://www.wikidata.org/entity/Q33052,Q33052,Bemba,Bemba
+http://www.wikidata.org/entity/Q33173,Q33173,Chittagonian,Chittagonian
+http://www.wikidata.org/entity/Q22809485,Q22809485,North Levantine Arabic,North_Levantine_Arabic
+http://www.wikidata.org/entity/Q16112855,Q16112855,Southern Pashto,Southern_Pashto
+http://www.wikidata.org/entity/Q12642194,Q12642194,Northern Pashto,Northern_Pashto
+http://www.wikidata.org/entity/Q33375,Q33375,Hakka Chinese,Hakka_Chinese
+http://www.wikidata.org/entity/Q33398,Q33398,Hazaragi,Hazaragi
+http://www.wikidata.org/entity/Q29579,Q29579,Awadhi,Awadhi
+http://www.wikidata.org/entity/Q33368,Q33368,Luganda,Luganda
+http://www.wikidata.org/entity/Q33219,Q33219,Banyumasan Javanese,Banyumasan_Javanese
+http://www.wikidata.org/entity/Q33239,Q33239,Cebuano,Cebuano
+http://www.wikidata.org/entity/Q32706,Q32706,Dioula,Dioula
+http://www.wikidata.org/entity/Q33270,Q33270,Ho,Ho
+http://www.wikidata.org/entity/Q33291,Q33291,Fon,Fon
+http://www.wikidata.org/entity/Q33284,Q33284,Central Bikol,Central_Bikol
+http://www.wikidata.org/entity/Q33274,Q33274,Shawiya,Shawiya
+http://www.wikidata.org/entity/Q33243,Q33243,Bambara,Bambara
+http://www.wikidata.org/entity/Q55633582,Q55633582,South Levantine Arabic,South_Levantine_Arabic
+http://www.wikidata.org/entity/Q65455884,Q65455884,Marwari,Marwari
+http://www.wikidata.org/entity/Q33813,Q33813,Miao,Miao
+http://www.wikidata.org/entity/Q110276967,Q110276967,Ciamis Sundanese,Ciamis_Sundanese
+http://www.wikidata.org/entity/Q17993025,Q17993025,Standard Persian,Standard_Persian
+http://www.wikidata.org/entity/Q10867404,Q10867404,Sabah Malay,Sabah_Malay
+http://www.wikidata.org/entity/Q25268,Q25268,Afroasiatic,Afroasiatic
+http://www.wikidata.org/entity/Q36094,Q36094,Kanuri,Kanuri
+http://www.wikidata.org/entity/Q56312,Q56312,Marwari,Marwari
+http://www.wikidata.org/entity/Q180937,Q180937,Tosk,Tosk
