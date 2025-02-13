@@ -3,6 +3,7 @@ from unidecode import unidecode
 
 def get_function_name(entity_name):
     fun_name = unidecode(entity_name)
+    fun_name = fun_name[0].upper() + fun_name[1:]
     fun_name = fun_name.replace("'", "") \
         .replace(" ", "_") \
         .replace("`",'') \
@@ -40,6 +41,8 @@ if __name__ == '__main__':
          
          for r in datarows[1:]
         ]
+    
+    newrows = sorted(newrows, key=lambda l: l[3])
 
     if args.output:
         with open(args.output,'w') as f:
