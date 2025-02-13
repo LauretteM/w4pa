@@ -1,7 +1,7 @@
 import csv
 from unidecode import unidecode
 
-def get_function_name(entity_name):
+def get_function_name(entity_name, entity_id):
     fun_name = unidecode(entity_name)
     fun_name = fun_name[0].upper() + fun_name[1:]
     fun_name = fun_name.replace("'", "") \
@@ -10,7 +10,7 @@ def get_function_name(entity_name):
         .replace('-','_') \
         .replace('.','') \
         .replace(',','')
-    return fun_name
+    return f"{entity_id}_{fun_name}"
 
 def get_entity_id(entity_url):
     return entity_url[31:]
@@ -37,7 +37,7 @@ if __name__ == '__main__':
         (r[0],
          get_entity_id(r[0]),
          r[1],
-         get_function_name(r[1]))
+         get_function_name(r[1],get_entity_id(r[0])))
          
          for r in datarows[1:]
         ]
