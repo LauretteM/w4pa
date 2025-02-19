@@ -7,11 +7,13 @@ def prepare_abs_line(eng_label, category_name):
 
 def prepare_eng_line(function_name):
     """Format the third column entry as 'eng = mkNP eng_N ;'"""
-    return f"{function_name} = mkNP {function_name}_N ;"
+    oper_name = function_name[function_name.index("_")+1:]
+    return f"{function_name} = mkNP {oper_name}_N ;"
 
 def prepare_lex_line(eng_label, function_name):
     """Format the third column entry as 'eng_N : N = mkN "eng" ;'"""
-    return f'{function_name}_N : N = mkN "{eng_label}" ;'
+    oper_name = function_name[function_name.index("_") + 1 :]
+    return f'{oper_name}_N : N = mkN "{eng_label}" ;'
 
 def read_csv(input_file):
     """Read the CSV file into a list of dictionaries."""

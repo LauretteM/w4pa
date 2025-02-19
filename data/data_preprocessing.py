@@ -42,7 +42,7 @@ if __name__ == '__main__':
          for r in datarows[1:]
         ]
     
-    newrows = sorted(newrows, key=lambda l: l[3])
+    newrows = sorted(newrows, key=lambda l: l[2])
 
     if args.output:
         with open(args.output,'w') as f:

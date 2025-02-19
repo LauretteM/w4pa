@@ -8,30 +8,30 @@ abstract Descriptions = Countries, Languages, Cities, Currencies ** {
         CityFeature ;
         CurrencyFeature ;
         LanguageFeature ;
+        NumberDet ;
 
     fun
         CountryKindDescription : CountryKind -> Description ;
         CountryRegionDescription : CountryRegion -> Description ;
         FullCountryDescription : CountryKind -> CountryRegion -> Description ;
 
-        CityDescription : CapitalCity -> Country -> Description ;
-        CityFeatureDescription : CapitalCity -> CityFeature -> Country -> Description ;
+        CityDescription : Country -> Description ;
+        CityFeatureDescription : CityFeature -> Country -> Description ;
 
-        LanguageDescription : Language -> LanguageFeature -> Description ;
+        LanguageFeatureDescription : LanguageFeature -> Description ;
 
-        CurrencyDescription : Currency -> CurrencyFeature -> Description ;
+        CurrencyFeatureDescription : CurrencyFeature -> Description ;
 
-        BigCity : CityFeature ;
         LargestCity : CityFeature ;
 
         OfficialLanguage : Country -> LanguageFeature ;
         SpokenInCountry: Country -> LanguageFeature ;
         SpokenInTwoCountries : Country -> Country -> LanguageFeature ;
-        NumberOfSpeakers : String -> LanguageFeature ;
+        NumberOfSpeakers : NumberDet -> LanguageFeature ;
 
         UsedInCountry : Country -> CurrencyFeature ;
         CentralBankFeature : CentralBank -> CurrencyFeature ;
 
-        
+        IntDet : Int -> NumberDet ;
 
 }
