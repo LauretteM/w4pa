@@ -4,12 +4,17 @@ from unidecode import unidecode
 def get_function_name(entity_name, entity_id):
     fun_name = unidecode(entity_name)
     fun_name = fun_name[0].upper() + fun_name[1:]
-    fun_name = fun_name.replace("'", "") \
-        .replace(" ", "_") \
-        .replace("`",'') \
-        .replace('-','_') \
-        .replace('.','') \
-        .replace(',','')
+    fun_name = (
+        fun_name.replace("'", "")
+        .replace(" ", "_")
+        .replace("`", "")
+        .replace("-", "_")
+        .replace(".", "")
+        .replace(",", "")
+        .replace("/", "")
+        .replace("(", "")
+        .replace(")", "")
+    )
     return f"{entity_id}_{fun_name}"
 
 def get_entity_id(entity_url):

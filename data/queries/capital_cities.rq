@@ -1,7 +1,8 @@
 # All capital cities of an instance of a country or a subclass thereof
-SELECT DISTINCT ?city ?cityLabel_en WHERE {
+SELECT DISTINCT ?city ?cityLabel_en ?cityDescription_en WHERE {
   ?country wdt:P31/wdt:P279* wd:Q6256 .
   ?country wdt:P36 ?city .
   ?city rdfs:label ?cityLabel_en . FILTER(lang(?cityLabel_en)='en') .
+  ?city schema:description ?cityDescription_en . FILTER(lang(?cityDescription_en)='en') .
 }
 ORDER BY ?cityLabel_en

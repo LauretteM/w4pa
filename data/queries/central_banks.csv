@@ -1,10 +1,10 @@
-currency,currencyLabel,centralbankLabel,count
-http://www.wikidata.org/entity/Q4916,Euro,European Central Bank,26
-http://www.wikidata.org/entity/Q861690,West African CFA franc,Central Bank of West African States,8
-http://www.wikidata.org/entity/Q26365,Eastern Caribbean dollar,Eastern Caribbean Central Bank,8
-http://www.wikidata.org/entity/Q847739,Central African CFA franc,Bank of Central African States,6
-http://www.wikidata.org/entity/Q6527840,leprosy colony money,Tama Zenshōen Sanatorium,5
-http://www.wikidata.org/entity/Q2329625,Austrian krone,Austrian National Bank,3
-http://www.wikidata.org/entity/Q373429,Yugoslav dinar,National Bank of Serbia,3
-http://www.wikidata.org/entity/Q2329625,Austrian krone,Austrian-Hungarian Bank,3
-http://www.wikidata.org/entity/Q23541018,grivna,http://www.wikidata.org/.well-known/genid/b096330622c650e442bc488ff700663a,3
+currency,currencyLabel,centralbankLabel,centralbankDescription,count
+http://www.wikidata.org/entity/Q4916,Euro,European Central Bank,central bank of the European Union and the eurozone,26
+http://www.wikidata.org/entity/Q861690,West African CFA franc,Central Bank of West African States,central bank serving the West African Economic and Monetary Union,8
+http://www.wikidata.org/entity/Q26365,Eastern Caribbean dollar,Eastern Caribbean Central Bank,central bank,8
+http://www.wikidata.org/entity/Q847739,Central African CFA franc,Bank of Central African States,central bank,6
+http://www.wikidata.org/entity/Q6527840,leprosy colony money,Tama Zenshōen Sanatorium,"sanatorium in Higashimurayama, Tokyo, Japan",5
+http://www.wikidata.org/entity/Q2329625,Austrian krone,Austrian National Bank,Austria’s central bank,3
+http://www.wikidata.org/entity/Q373429,Yugoslav dinar,National Bank of Serbia,central bank of Serbia,3
+http://www.wikidata.org/entity/Q2329625,Austrian krone,Austrian-Hungarian Bank,"central bank of Austria-Hungary, 1878-1922",3
+http://www.wikidata.org/entity/Q23541018,grivna,http://www.wikidata.org/.well-known/genid/b096330622c650e442bc488ff700663a,,3

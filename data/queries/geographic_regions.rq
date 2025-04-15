@@ -1,8 +1,11 @@
 # All geographic regions of which all countries and subclasses are part of
-SELECT DISTINCT ?area ?areaLabel_en WHERE {
+SELECT DISTINCT ?item ?itemLabel_en WHERE {{
   ?country wdt:P31/wdt:P279* wd:Q6256 .
-  ?country wdt:P361 ?area .
-  ?area wdt:P31 wd:Q82794 .
-  ?area rdfs:label ?areaLabel_en . FILTER(lang(?areaLabel_en)='en') .
-}
+  ?country wdt:P361 ?item .
+  ?item wdt:P31 wd:Q82794 .
+  ?item rdfs:label ?itemLabel_en . FILTER(lang(?itemLabel_en)='en') .
+} UNION {
+  ?item wdt:P31 wd:Q5107. # must be a continent
+  ?item rdfs:label ?itemLabel_en . FILTER(lang(?itemLabel_en)='en') .
+}}
 ORDER BY ?area
