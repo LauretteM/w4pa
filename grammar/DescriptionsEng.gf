@@ -21,7 +21,22 @@ concrete DescriptionsEng of Descriptions = CountriesEng ** open SyntaxEng,Paradi
         OfficialLanguage cn = mkNP (mkCN official_A (mkCN (mkN2 language_N) cn)) ;
         SpokenInCountry cn = mkNP (mkNP language_N) (mkRS (mkRCl which_RP (mkVP (passiveVP speak_V2) (SyntaxEng.mkAdv in_Prep cn)))) ;
         SpokenInTwoCountries cn1 cn2 = mkNP (mkNP language_N) (mkRS (mkRCl which_RP (mkVP (passiveVP speak_V2) (SyntaxEng.mkAdv in_Prep (mkNP and_Conj (mkListNP cn1 cn2)))))) ;
+        SpokenCountriesNumber number = mkNP (mkNP language_N) (mkRS (mkRCl which_RP (mkVP (passiveVP speak_V2) (SyntaxEng.mkAdv in_Prep (mkNP number country_N))))) ;
         NumberOfSpeakers number = mkNP (mkNP language_N) (mkRS (mkRCl which_RP (mkVP (passiveVP speak_V2) (SyntaxEng.mkAdv by_Prep (mkNP number speaker_N))))) ;
+
+        SpokenCountriesAndTheOfficial cn number = mkNP and_Conj (mkListNP 
+            (mkNP (mkNP language_N) (mkRS (mkRCl which_RP (mkVP (passiveVP speak_V2) (SyntaxEng.mkAdv in_Prep (mkNP number country_N))))))
+            (mkNP theSg_Det (mkCN official_A (mkCN (mkN2 language_N) cn)))
+         ) ;
+        SpokenCountriesAndAnOfficial cn number = mkNP and_Conj (mkListNP 
+            (mkNP (mkNP language_N) (mkRS (mkRCl which_RP (mkVP (passiveVP speak_V2) (SyntaxEng.mkAdv in_Prep (mkNP number country_N))))))
+            (mkNP aSg_Det (mkCN official_A (mkCN (mkN2 language_N) cn)))
+         ) ;
+        
+        SpokenCountriesNumberOfSpeakers numspeakers numcountries =
+            mkNP
+                (mkNP (mkCN language_N (SyntaxEng.mkAdv with_Prep (mkNP numspeakers speaker_N))))
+                (mkRS (mkRCl which_RP (mkVP (passiveVP speak_V2) (SyntaxEng.mkAdv in_Prep (mkNP numcountries country_N))))) ;
 
         IntDet i = mkDet (mkcard (mkSymb i.s)) ;
 

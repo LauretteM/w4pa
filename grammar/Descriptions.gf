@@ -27,7 +27,13 @@ abstract Descriptions = Countries, Languages, Cities, Currencies ** {
         OfficialLanguage : Country -> LanguageFeature ;
         SpokenInCountry: Country -> LanguageFeature ;
         SpokenInTwoCountries : Country -> Country -> LanguageFeature ;
+        SpokenCountriesNumber : NumberDet -> LanguageFeature ;
         NumberOfSpeakers : NumberDet -> LanguageFeature ;
+
+        SpokenCountriesAndTheOfficial : Country -> NumberDet -> LanguageFeature ;
+        SpokenCountriesAndAnOfficial : Country -> NumberDet -> LanguageFeature ;
+
+        SpokenCountriesNumberOfSpeakers : NumberDet -> NumberDet -> LanguageFeature ;
 
         UsedInCountry : Country -> CurrencyFeature ;
         CentralBankFeature : CentralBank -> CurrencyFeature ;

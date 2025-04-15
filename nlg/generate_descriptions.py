@@ -14,9 +14,14 @@ except ImportError:
     from yaml import Loader, Dumper
 
 CAPITAL_CITIES_QUERY_FILE = '../data/queries/capital_cities.auto.rq'
+COUNTRIES_QUERY_FILE = "../data/queries/countries.auto.rq"
+LANGUAGES_QUERY_FILE = "../data/queries/languages.auto.rq"
 
 WIKIDATA_SITE = pywikibot.Site("wikidata", "wikidata")
 QUERY_LENGTH_LIMIT = 500
+
+WARNINGS = []
+warning_msg = None
 
 lang_code_aliases = [
     {
@@ -26,8 +31,11 @@ lang_code_aliases = [
     }
 ]
 
-def warning_msg(*args, **kwargs):
+def warning_msg_live(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
+
+def warning_msg_later(*args):
+    WARNINGS.append(args)
 
 
 def get_function_name_of_entity(entity_id, pgf_grammar):
@@ -53,50 +61,205 @@ def find_gf_code(lang_code):
 def find_iso_3_code(lang_code):
     return find_code(lang_code,"iso-3")
 
-def generate_capital_city_descriptions(lang_code, pgf_grammar):
+def get_capital_city_tree_str(city_id,city_dict, pgf_grammar):
+
+    claims_dict = city_dict['claims']
+    country_claims = claims_dict['P17']
+
+    for country_claim in country_claims:
+        qualifiers = country_claim.qualifiers
+        if not 'P582' in qualifiers.keys(): # if the country claim has no end date
+            break
+    country_tgt = country_claim.getTarget()
+    country_id = country_tgt.getID()
+    if city_id == country_id:
+        return # city state, will deal with this as a country
+    country_fun = get_function_name_of_entity(country_id,pgf_grammar)
+
+    instance_of_claims = claims_dict["P31"]
+    for instance_of_claim in instance_of_claims:
+        clm_target = instance_of_claim.getTarget()
+        if clm_target.getID() == 'Q51929311': # largest city
+            tree_str = f"CityFeatureDescription LargestCity {country_fun}"
+        else:
+            tree_str = f"CityDescription {country_fun}"
+
+    if not country_fun:
+        return
+
+    return tree_str
+
+def get_country_tree_str(country_id,country_dict, pgf_grammar):
+
+    claims_dict = country_dict["claims"]
+    region_fun = None
+    instance_fun = None
+
+    try:
+        in_on_physical_feature_claims = claims_dict['P706']
+        for claim in in_on_physical_feature_claims:
+            claim_tgt = claim.getTarget()
+            tgt_id = claim_tgt.getID()
+            region_fun = get_function_name_of_entity(tgt_id, pgf_grammar)
+    except KeyError:
+        pass
+
+    if not region_fun:
+        try:
+            continent_claims = claims_dict["P30"]
+            for claim in continent_claims:
+                claim_tgt = claim.getTarget()
+                tgt_id = claim_tgt.getID()
+                region_fun = get_function_name_of_entity(tgt_id, pgf_grammar)
+        except KeyError:
+            pass
+
+    if not region_fun:
+        try:
+            part_of_claims = claims_dict["P361"]
+            for part_of_claim in part_of_claims:
+                part_of_tgt = part_of_claim.getTarget() # target is the thing the country is part of
+                tgt_id = part_of_tgt.getID()
+                tgt_dict = part_of_tgt.get()
+                tgt_claims = tgt_dict["claims"]
+                tgt_instance_of_claims = tgt_claims["P31"]
+                for tgt_instance_of_claim in tgt_instance_of_claims:
+                    tgt_instance_of_entity = (
+                        tgt_instance_of_claim.getTarget()
+                    )  # target is the kind of the thing
+                    tgt_instance_of_entity_id = tgt_instance_of_entity.getID()
+                    if tgt_instance_of_entity_id == "Q82794" or tgt_instance_of_entity_id == "Q5107":  # we have a geographic region the country is part of
+                        region_fun = get_function_name_of_entity(tgt_id, pgf_grammar)
+        except KeyError:
+            pass
+
+    try:
+        instance_of_claims = claims_dict["P31"]
+        clm_target_ids = [clm_tgt.getTarget().getID() for clm_tgt in instance_of_claims]
+
+        if "Q112099" in clm_target_ids:
+            instance_fun = "IslandCountry"
+        elif "Q123480" in clm_target_ids:
+            instance_fun = "LandlockedCountry"
+        elif "Q11396118" in clm_target_ids:
+            instance_fun = "DividedTerritory"
+
+    except KeyError:
+        pass
+
+    if region_fun and instance_fun:
+        tree_str = f"FullCountryDescription {instance_fun} {region_fun}"
+    elif region_fun:
+        tree_str = f"CountryRegionDescription {region_fun}"
+    elif instance_fun:
+        tree_str = f"CountryKindDescription {instance_fun}"
+    else:
+        tree_str = None
+
+    return tree_str
+
+def get_language_tree_str(lang_id, lang_dict, pgf_grammar):
+
+    claims_dict = lang_dict["claims"]
+    langfeature_fun = None
+
+    try:
+        country_claims = claims_dict["P17"]
+        countries = [clm_tgt.getTarget() for clm_tgt in country_claims]
+    except KeyError:
+        countries = None
+
+    official_language_countries = []
+    spoken_countries = []
+
+    if countries:
+        for c in countries:
+            c_dict = c.get()
+            c_id = c.getID()
+            country_fun = get_function_name_of_entity(c_id, pgf_grammar)
+            spoken_countries.append(country_fun)
+            c_claims = c_dict["claims"]
+            try:
+                official_language_claims = c_claims["P37"]
+                all_official_languages_ids = [
+                    clm_tgt.getTarget().getID()
+                    for clm_tgt in official_language_claims
+                    if clm_tgt.getTarget()
+                ]
+                this_official_language_ids = [c for c in all_official_languages_ids if c == lang_id
+                ]
+                if len(this_official_language_ids) > 0:
+                    official_language_countries.append((country_fun,len(all_official_languages_ids)))
+            except KeyError:
+                pass
+
+    number_of_speakers = 0
+    try:
+        speakers_claims = claims_dict["P1098"]
+        for claim in speakers_claims:
+            claim_tgt = claim.getTarget()
+            number_of_speakers = claim_tgt.amount
+    except KeyError:
+        pass
+
+    if len(official_language_countries) == 1:
+        official_country_fun,number_of_official_langs = official_language_countries[0]
+        if len(spoken_countries) > 1:
+            number_spoken_countries = len(spoken_countries)
+            if number_of_official_langs == 1:
+                langfeature_fun = f"SpokenCountriesAndTheOfficial {official_country_fun} (IntDet {number_spoken_countries})"
+            else:
+                langfeature_fun = f"SpokenCountriesAndAnOfficial {official_country_fun} (IntDet {number_spoken_countries})"
+        else:
+            langfeature_fun = f"OfficialLanguage {official_country_fun}"
+    elif len(official_language_countries) == 0:
+        if len(spoken_countries) == 1:
+            spoken_country = spoken_countries[0]
+            langfeature_fun = f"SpokenInCountry {spoken_country}"
+        elif len(spoken_countries) == 2:
+            spoken_country_1 = spoken_countries[0]
+            spoken_country_2 = spoken_countries[1]
+            langfeature_fun = (
+                f"SpokenInTwoCountries {spoken_country_1} {spoken_country_2}"
+            )
+        elif len(spoken_countries) > 2:
+            number_spoken_countries = len(spoken_countries)
+            if number_of_speakers > 0:
+                langfeature_fun = f"SpokenCountriesNumberOfSpeakers (IntDet {number_of_speakers}) (IntDet {number_spoken_countries})"
+            else:
+                langfeature_fun = f"SpokenCountriesNumber (IntDet {number_spoken_countries})"
+    elif number_of_speakers > 0:
+        langfeature_fun = f"NumberOfSpeakers (IntDet {number_of_speakers})"
+
+    if langfeature_fun:
+        tree_str = f"LanguageFeatureDescription ({langfeature_fun})"
+        return tree_str
+
+def generate_descriptions(lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode=None):
 
     lang_code = find_iso_2_code(lang_code)
 
-    # get all capital city entities
-    with open(CAPITAL_CITIES_QUERY_FILE) as query_file:
-        QUERY = query_file.read()
-    generator = pg.WikidataSPARQLPageGenerator(QUERY, site=WIKIDATA_SITE)
+    if not test_mode:
+        entities = get_entities(query_filename)
+    else:
+        entities = get_test_entities(test_mode)
 
-    cities = list(itertools.islice(generator, QUERY_LENGTH_LIMIT))
     descriptions = {}
 
-    for i in tqdm(range (len(cities)), desc="Analysing Wikidata..."):
+    for i in tqdm(range(len(entities)), desc="Analysing Wikidata..."):
 
-        city = cities[i]
+        entity = entities[i]
 
-        city_dict = city.get()
-        city_name = city_dict["labels"][lang_code]
-        city_id = city.getID()
-        city_fun = get_function_name_of_entity(city_id,pgf_grammar)
+        entity_dict = entity.get()
+        entity_name = entity_dict["labels"][lang_code]
+        entity_id = entity.getID()
+        entity_fun = get_function_name_of_entity(entity_id,pgf_grammar)
 
-        claims_dict = city_dict['claims']
-        country_claims = claims_dict['P17']
+        tree_str = tree_str_fun(entity_id,entity_dict, pgf_grammar)
 
-        for country_claim in country_claims:
-            qualifiers = country_claim.qualifiers
-            if not 'P582' in qualifiers.keys():
-                break
-        country_trgt = country_claim.getTarget()
-        country_id = country_trgt.getID()
-        country_fun = get_function_name_of_entity(country_id,pgf_grammar)
-
-        instance_of_claims = claims_dict["P31"]
-        for instance_of_claim in instance_of_claims:
-            clm_target = instance_of_claim.getTarget()
-            if clm_target.getID() == 'Q133442': # city-state
-                tree_str = None # will deal with this as a country
-            elif clm_target.getID() == 'Q51929311': # largest city
-                tree_str = f"CityFeatureDescription LargestCity {country_fun}"
-            else:
-                tree_str = f"CityDescription {country_fun}"
-
-        if not city_fun or not country_fun or not tree_str:
-            warning_msg(f"Not generating a description for {city_name}")
+        if not entity_fun or not tree_str:
+            warning_msg(f"Not generating a description for {entity_name}")
+            warning_msg(entity_fun)
             continue
 
         tree = pgf.readExpr(tree_str)
@@ -104,21 +267,80 @@ def generate_capital_city_descriptions(lang_code, pgf_grammar):
         conc = pgf_grammar.languages[conc_name]
         conc_lin = conc.linearize(tree)
 
-        city_data_dict = {
+        entity_data_dict = {
             "labels": {},
             "descriptions": {},
-            "wd_id": city_id,
-            "gf_id": city_fun,
+            "wd_id": entity_id,
+            "gf_id": entity_fun,
             "description_tree": tree_str
         }
-        city_data_dict["labels"][find_iso_3_code(lang_code)] = city_name
-        city_data_dict["descriptions"][find_iso_3_code(lang_code)] = conc_lin
+        entity_data_dict["labels"][find_iso_3_code(lang_code)] = entity_name
+        entity_data_dict["descriptions"][find_iso_3_code(lang_code)] = conc_lin
 
-        city_key = f"{city_fun}_CapitalCity"
+        entity_key = f"{entity_fun}_{key_suffix}"
 
-        descriptions[city_key] = city_data_dict
+        descriptions[entity_key] = entity_data_dict
 
     return descriptions
+
+
+def generate_capital_city_descriptions(lang_code, pgf_grammar, test_mode):
+
+    query_filename = CAPITAL_CITIES_QUERY_FILE
+    tree_str_fun = get_capital_city_tree_str
+    key_suffix = "CapitalCity"
+
+    return generate_descriptions(
+        lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode
+    )
+
+
+def generate_country_descriptions(lang_code, pgf_grammar, test_mode):
+
+    query_filename = COUNTRIES_QUERY_FILE
+    tree_str_fun = get_country_tree_str
+    key_suffix = "Country"
+
+    return generate_descriptions(
+        lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode
+    )
+
+
+def generate_language_descriptions(lang_code, pgf_grammar, test_mode):
+
+    query_filename = LANGUAGES_QUERY_FILE
+    tree_str_fun = get_language_tree_str
+    key_suffix = "Language"
+
+    return generate_descriptions(
+        lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode
+    )
+
+
+def get_entities(query_filename):
+    # get all entities
+    with open(query_filename) as query_file:
+        QUERY = query_file.read()
+    generator = pg.WikidataSPARQLPageGenerator(QUERY, site=WIKIDATA_SITE)
+
+    entities = list(itertools.islice(generator, QUERY_LENGTH_LIMIT))
+
+    return entities
+
+def get_test_entities(filename):
+    with open(filename) as f:
+        fun_names = [l.strip() for l in f.readlines()]
+    
+    entity_ids = [f[:f.index('_')] for f in fun_names]
+
+    repo = WIKIDATA_SITE.data_repository()
+
+    entities = []
+    for i in entity_ids:
+        item = pywikibot.ItemPage(repo, i)
+        entities.append(item)
+    
+    return entities
 
 
 if __name__ == '__main__':
@@ -128,7 +350,14 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='generate descriptions from Wikidata')
     parser.add_argument("param_config",help="name of json file containing parameters of generation task")
     parser.add_argument('-a',dest="amend_yaml_file",help="name of (possibly empty) yaml file to amend")
+    parser.add_argument('-t',dest='test_mode_input',default=None,help='')
+    parser.add_argument('-w',dest='supress_warnings',action='store_true',help='suppress warnings until execution is done')
     args = parser.parse_args()
+
+    if args.supress_warnings:
+        warning_msg = warning_msg_later
+    else:
+        warning_msg = warning_msg_live
 
     with open(args.param_config) as f:
         params = json.loads(f.read())
@@ -137,8 +366,24 @@ if __name__ == '__main__':
 
     pgf_grammar = pgf.readPGF(os.path.join("..","grammar",params["pgf_grammar"]))
 
+    descriptions = {}
     if "capital_cities" in params['entity_types']:
-        descriptions = generate_capital_city_descriptions(lang_code, pgf_grammar)
+        city_descriptions = generate_capital_city_descriptions(lang_code, pgf_grammar,args.test_mode_input)
+        descriptions.update(city_descriptions)
+    if "countries" in params['entity_types']:
+        country_descriptions = generate_country_descriptions(
+            lang_code, pgf_grammar, args.test_mode_input
+        )
+        descriptions.update(country_descriptions)
+    if "languages" in params["entity_types"]:
+        language_descriptions = generate_language_descriptions(
+            lang_code, pgf_grammar, args.test_mode_input
+        )
+        descriptions.update(language_descriptions)
+
+    if args.supress_warnings:
+        for a in WARNINGS:
+            print(*a, file=sys.stderr)
 
     if args.amend_yaml_file:
 
