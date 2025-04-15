@@ -1,6 +1,6 @@
 # Wikidata for the People of Africa (W4PA)
 
-This directory contains data and code to support the [W4PA project](https://meta.m.wikimedia.org/wiki/Grants:Programs/Wikimedia_Research_Fund/Wikidata_for_the_People_of_Africa).
+This directory contains data and code to support the [W4PA project](https://meta.wikimedia.org/wiki/Research:Wikidata_for_the_People_of_Africa).
 
 Grant applicants:
 - Laurette Marais
