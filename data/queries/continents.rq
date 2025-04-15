@@ -1,0 +1,7 @@
+# continents
+SELECT ?item ?itemLabel
+WHERE
+{
+  ?item wdt:P31 wd:Q5107. # must be a continent
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en') .
+}

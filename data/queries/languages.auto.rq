@@ -1,0 +1,7 @@
+# languages with more than 1 million speakers
+SELECT DISTINCT ?item WHERE {
+  ?item wdt:P31/wdt:P279* wd:Q34770 .
+  ?item wdt:P1098 ?speakers .
+  FILTER (xsd:integer(?speakers) > 1000000).
+  ?item rdfs:label ?languageLabel . FILTER(lang(?languageLabel)='en') .
+}

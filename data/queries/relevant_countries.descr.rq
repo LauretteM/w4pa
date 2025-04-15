@@ -1,0 +1,39 @@
+# All relevant types of countries with English labels
+SELECT DISTINCT ?item ?itemLabel ?itemDescription WHERE {{
+  ?item wdt:P31 wd:Q6256 .
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en')
+  ?item schema:description ?itemDescription . FILTER(lang(?itemDescription)='en')
+} UNION {
+  ?item wdt:P31 wd:Q112099 .
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en')
+    ?item schema:description ?itemDescription . FILTER(lang(?itemDescription)='en')
+  } UNION {
+  ?item wdt:P31 wd:Q11396118 .
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en')
+    ?item schema:description ?itemDescription . FILTER(lang(?itemDescription)='en')
+  } UNION {
+  ?item wdt:P31 wd:Q1151616 .
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en')
+    ?item schema:description ?itemDescription . FILTER(lang(?itemDescription)='en')
+  } UNION {
+  ?item wdt:P31 wd:Q123480 .
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en')
+    ?item schema:description ?itemDescription . FILTER(lang(?itemDescription)='en')
+  } UNION {
+  ?item wdt:P31 wd:Q1323642 .
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en')
+  ?item schema:description ?itemDescription . FILTER(lang(?itemDescription)='en')
+  } UNION {
+  ?item wdt:P31 wd:Q3624078 .
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en')
+  ?item schema:description ?itemDescription . FILTER(lang(?itemDescription)='en')
+  } UNION {
+  ?item wdt:P31 wd:Q51576574 .
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en')
+    ?item schema:description ?itemDescription . FILTER(lang(?itemDescription)='en')
+  } UNION {
+  ?item wdt:P31 wd:Q66724388 .
+  ?item rdfs:label ?itemLabel . FILTER(lang(?itemLabel)='en')
+    ?item schema:description ?itemDescription . FILTER(lang(?itemDescription)='en')
+  }}
+ORDER BY ?item ?itemLabel
