@@ -7,7 +7,7 @@ concrete CountriesZul of Countries = open SyntaxSBantuZul,ParadigmsZul,ParamX,Pr
     
     lin
         -- RealUnion : CountryKind ;
-        -- IslandCountry = mkNP aSg_Det (mkCN island_N (mkNP country_N)) ;
+        IslandCountry = mkNP (mkNP country_N) (mkRS (mkVP (mkNP island_N))) ;
         DividedTerritory = mkNP (mkNP territory_N) (mkRSShort (mkStativeVP be_divided_V)) ;
         -- LandlockedCountry = mkNP aSg_Det (mkCN landlocked_A country_N) ;
         -- TranscontinentalCountry = mkNP aSg_Det (mkCN transcontinental_A country_N) ;
