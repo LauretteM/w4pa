@@ -15,7 +15,7 @@ concrete CountriesZul of Countries = open SyntaxSBantuZul,ParadigmsZul,ParamX,Pr
         DevelopingCountry = mkNP (mkNP country_N) (mkRSShort (mkVP develop_V)) ;
         -- PersonalUnion = mkNP aSg_Det (mkCN personal_A union_N) ;
         SovereignState = mkNP (mkNP state_N) (mkRSShort (mkStativeVP be_sovereign_V)) ;
-        -- MediterraneanCountry = mkNP aSg_Det (mkCN mediterranean_A country_N) ;
+        MediterraneanCountry = mkNP (mkNP country_N) (mkRS (mkVP (mkLoc (locativisedNoun Mediterranean_N)))) ;
         AutonomousCountry = mkNP (mkNP country_N) (mkRSShort (mkStativeVP be_autonomous_V)) ;
 
         Q15_Africa = mkNP Africa_N ;
