@@ -17,7 +17,7 @@ abstract Countries = {
         PersonalUnion : CountryKind ;
         SovereignState : CountryKind ;
         MediterraneanCountry : CountryKind ;
-        AutonomousCountryDenmark : CountryKind ;
+        AutonomousCountry : CountryKind ;
 
         Q15_Africa : CountryRegion ;
 		Q828_Americas : CountryRegion ;

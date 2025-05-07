@@ -22,6 +22,7 @@ resource WikiDataLexiconZul = open CatZul,ResZul,ParadigmsZul in {
         -- adjective-like lexical items
         be_autonomous_V : V = mkV "zimel" ;
         be_divided_V : V = mkV "ehlukan" ;
+		develop_V : V = mkV "thuthuk" ;
         -- landlocked_A : A = mkA "landlocked" ;
         transcontinental_A : A = mkA "transcontinental" ;
         developed_A : A = mkA "developed" ;

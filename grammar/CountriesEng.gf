@@ -16,7 +16,7 @@ concrete CountriesEng of Countries = open SyntaxEng,ParadigmsEng,ParamX,Prelude,
         PersonalUnion = mkNP aSg_Det (mkCN personal_A union_N) ;
         SovereignState = mkNP aSg_Det (mkCN sovereign_A  state_N) ;
         MediterraneanCountry = mkNP aSg_Det (mkCN mediterranean_A country_N) ;
-        AutonomousCountryDenmark = mkNP aSg_Det (mkCN autonomous_A country_N) ;
+        AutonomousCountry = mkNP aSg_Det (mkCN autonomous_A country_N) ;
 
         Q15_Africa = mkNP Africa_N ;
 		Q828_Americas = mkNP Americas_N ;
