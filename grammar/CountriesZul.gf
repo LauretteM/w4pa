@@ -8,15 +8,15 @@ concrete CountriesZul of Countries = open SyntaxSBantuZul,ParadigmsZul,ParamX,Pr
     lin
         -- RealUnion : CountryKind ;
         IslandCountry = mkNP (mkNP country_N) (mkRS (mkVP (mkNP island_N))) ;
-        DividedTerritory = mkNP (mkNP territory_N) (mkRSShort (mkStativeVP be_divided_V)) ;
+        DividedTerritory = mkNP (mkNP territory_N) (mkRSShort (mkVPStative be_divided_V)) ;
         -- LandlockedCountry = mkNP aSg_Det (mkCN landlocked_A country_N) ;
         -- TranscontinentalCountry = mkNP aSg_Det (mkCN transcontinental_A country_N) ;
-        DevelopedCountry = mkNP (mkNP country_N) (mkRS (mkStativeVP develop_V)) ;
+        DevelopedCountry = mkNP (mkNP country_N) (mkRS (mkVPStative develop_V)) ;
         DevelopingCountry = mkNP (mkNP country_N) (mkRSShort (mkVP develop_V)) ;
         -- PersonalUnion = mkNP aSg_Det (mkCN personal_A union_N) ;
-        SovereignState = mkNP (mkNP state_N) (mkRSShort (mkStativeVP be_sovereign_V)) ;
+        SovereignState = mkNP (mkNP state_N) (mkRSShort (mkVPStative be_sovereign_V)) ;
         MediterraneanCountry = mkNP (mkNP country_N) (mkRS (mkVP (mkLoc (locativisedNoun Mediterranean_N)))) ;
-        AutonomousCountry = mkNP (mkNP country_N) (mkRSShort (mkStativeVP be_autonomous_V)) ;
+        AutonomousCountry = mkNP (mkNP country_N) (mkRSShort (mkVPStative be_autonomous_V)) ;
 
         Q15_Africa = mkNP Africa_N ;
 		Q828_Americas = mkNP Americas_N ;

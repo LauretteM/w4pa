@@ -35,44 +35,6 @@ resource WikiDataLexiconZul = open CatZul,ResZul,ParadigmsZul in {
 		largest_A : A = mkA "largest" ;
 		official_A : A = mkA "official" ;
 
-        -- placed name nouns
-        -- Africa_N : N = mkN "Africa" ;
-        -- America_N : N = mkN "America" ;
-        -- ArabWorld_N : N = mkN "Arab World" ;
-        -- Asia_N : N = mkN "Asia" ;
-        -- Australasia_N : N = mkN "Australasia" ;
-        -- Balkan_N : N = mkN "Balkan" ;
-        -- Basin_N : N = mkN "Basin" ;
-        -- Benelux_N : N = mkN "Benelux" ;
-        -- Caribbean_N : N = mkN "Caribbean" ;
-        -- Caucasus_N : N = mkN "Caucasus" ;
-        -- Denmark_N : N = mkN "Denmark" ;
-        -- Eurasia_N : N = mkN "Eurasia" ;
-        -- Europe_N : N = mkN "Europe" ;
-        -- Fennoscandia_N : N = mkN "Fennoscandia" ;
-        -- Ireland_N : N = mkN "Ireland" ;
-        -- Martin_N : N = mkN "Martin" ;
-        -- Melanesia_N : N = mkN "Melanesia" ;
-        -- Micronesia_N : N = mkN "Micronesia" ;
-        -- MiddleAmerica_N : N = mkN Middle_Str America_N ;
-        -- MiddleEast_N : N = mkN Middle_Str East_Str ;
-        -- -- Netherlands_N : N = mkN "Netherland" ;
-        -- NewZealand_N : N = mkN "New Zealand" ;
-        -- NorthAfrica_N : N = mkN North_Str Africa_N ;
-        -- NorthAmerica_N : N = mkN North_Str America_N ;
-        -- Oceania_N : N = mkN "Oceania" ;
-        -- Palestine_N : N = mkN "Palestine" ;
-        -- Polynesia_N : N = mkN "Polynesia" ;
-        -- Scandinavia_N : N = mkN "Scandinavia" ;
-        -- SouthAmerica_N : N = mkN South_Str America_N ;
-        -- SouthAsia_N : N = mkN South_Str Asia_N ;
-        -- SoutheastAfrica_N : N = mkN "Southeast Africa" ;
-        -- SoutheastAsia_N : N = mkN "Southeast Asia" ;
-        -- SoutheastEurope_N : N = mkN "Southeast Europe" ;
-        -- SouthwestEurope_N : N = mkN "Southwest Europe" ;
-        -- WindwardInsland_N : N = mkN "Windward Island" ; 
-        -- WestAfrica_N : N = mkN West_Str Africa_N ;
-
 		Africa_N : N = mkN "Afrika" C5_6 ;
 		Americas_N : N = mkN "Americas" ;
 		Antarctica_N : N = mkN "Antarctica" ;
@@ -126,8 +88,6 @@ resource WikiDataLexiconZul = open CatZul,ResZul,ParadigmsZul in {
 		West_Africa_N : N = mkN "West Africa" ;
 		West_Asia_N : N = mkN "West Asia" ;
 		Western_Europe_N : N = mkN "Western Europe" ;
-
-
         
         --country names nouns
 
