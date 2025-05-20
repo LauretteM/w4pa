@@ -126,8 +126,6 @@ resource WikiDataLexiconZul = open CatZul,ResZul,ParadigmsZul in {
 		West_Africa_N : N = mkN "-West Africa" C5_6 ;
 		West_Asia_N : N = mkN "-West Asia" C5_6 ;
 		Western_Europe_N : N = mkN "-Western Europe" C5_6 ;
-
-
         
         --country names nouns
 
