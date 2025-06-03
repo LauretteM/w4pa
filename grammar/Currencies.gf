@@ -176,4 +176,13 @@ abstract Currencies = {
 		Q8146_Yen : Currency ;
 		Q123213_Zloty : Currency ;
 
+		Q670723_Austrian_National_Bank : CentralBank ;
+		Q4056136_Austrian_Hungarian_Bank : CentralBank ; 
+		Q189972_Bank_of_Central_African_States : CentralBank ;
+		Q620942_Central_Bank_of_West_African_States : CentralBank ;
+		Q1210260_Eastern_Caribbean_Central_Bank : CentralBank ;
+		Q8901_European_Central_Bank : CentralBank ;
+		Q1194664_National_Bank_of_Serbia : CentralBank ;
+
+
 }
