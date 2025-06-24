@@ -6,7 +6,7 @@ concrete CurrenciesZul of Currencies = open SyntaxSBantuZul,ParadigmsZul,ParamX,
     
     lin
         -- Q125999_Albanian_lek = mkNP Albanian_lek_N 
-		Q199674_Algerian_dinar = mkNP AlgerianDinar_N ;
+		Q199674_Algerian_dinar = mkNP AlgerianDinar_CN ;
 		-- Q199578_Argentine_convertible_peso = mkNP Argentine_convertible_peso_N 
 		-- Q130498_Armenian_dram = mkNP Armenian_dram_N 
 		-- Q232270_Aruban_florin = mkNP Aruban_florin_N 
