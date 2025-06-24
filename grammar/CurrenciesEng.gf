@@ -127,4 +127,13 @@ concrete CurrenciesEng of Currencies = open SyntaxEng,ParadigmsEng,ParamX,Prelud
 		USDollar = mkNP USDollar_N ;
 		WestAfricanFranc = mkNP WestAfricanFranc_N ;
 
+		Q670723_Austrian_National_Bank = mkNP Austrian_National_Bank_N ;
+		Q4056136_Austrian_Hungarian_Bank = mkNP Austrian_Hungarian_Bank_N ;
+		Q189972_Bank_of_Central_African_States = mkNP Bank_of_Central_African_States_N ;
+		Q620942_Central_Bank_of_West_African_States = mkNP Central_Bank_of_West_African_States_N ;
+		Q1210260_Eastern_Caribbean_Central_Bank = mkNP Eastern_Caribbean_Central_Bank_N ;
+		Q8901_European_Central_Bank = mkNP European_Central_Bank_N ;
+		Q1194664_National_Bank_of_Serbia = mkNP National_Bank_of_Serbia_N ;
+
+
 }

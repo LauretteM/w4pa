@@ -14,18 +14,20 @@ concrete DescriptionsZul of Descriptions = CountriesZul, CurrenciesZul, SymbolSB
         FullCountryDescription ck cr = mkNP ck (mkRS (mkVP (mkLoc (locativisedNoun cr)))) ;
 
         CityDescription c = mkNP (possCN capital_city_N c) ;
-        CityFeatureDescription cf c = mkNP cf together_with (mkNP (possCN capital_city_N c)) ;
+        CityFeatureDescription cf c = mkNP cf together_with_ConjN (mkNP (possCN capital_city_N c)) ;
+
+        CurrencyFeatureDescription f = f ;
 
         LargestCity = mkNP (mkNP city_N) (mkRS (mkVP (mkAP big_A))) ;
 
         OfficialLanguage c = mkNP (mkNP language_N) (mkRS (mkVP (mkLoc (locativisedNoun (mkNP (possCN law_N c)))))) ;
         SpokenInCountry c = mkNP (mkNP language_N) (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv c))) ;
-        SpokenInTwoCountries c1 c2 = mkNP (mkNP language_N) (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP c1 and_with c2)))) ;
+        SpokenInTwoCountries c1 c2 = mkNP (mkNP language_N) (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP c1 with_ConjN c2)))) ;
         SpokenCountriesNumber nummod = mkNP (mkNP language_N) (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP (mkNP aPl_Det country_N) (mkRS nummod))))) ;
         NumberOfSpeakers nummod = mkNP (mkNP language_N) (mkRS (assocVP (mkNP (mkNP aPl_Det speaker_N) (mkRS nummod)))) ;
         
-        SpokenCountriesAndTheOfficial c nummod = mkNP (mkNP language_N) (mkRS (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP (mkNP aPl_Det country_N) (mkRS nummod))))) and (mkRS (mkVP (mkLoc (locativisedNoun (mkNP (possCN law_N c))))))) ;
-        SpokenCountriesNumberOfSpeakers numc nums = mkNP (mkNP language_N) (mkRS (mkRS (assocVP (mkNP (mkNP aPl_Det speaker_N) (mkRS nums)))) and (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP (mkNP aPl_Det country_N) (mkRS numc)))))) ;
+        SpokenCountriesAndTheOfficial c nummod = mkNP (mkNP language_N) (mkRS (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP (mkNP aPl_Det country_N) (mkRS nummod))))) and_Conj (mkRS (mkVP (mkLoc (locativisedNoun (mkNP (possCN law_N c))))))) ;
+        SpokenCountriesNumberOfSpeakers numc nums = mkNP (mkNP language_N) (mkRS (mkRS (assocVP (mkNP (mkNP aPl_Det speaker_N) (mkRS nums)))) and_Conj (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP (mkNP aPl_Det country_N) (mkRS numc)))))) ;
 
         OfficialCurrency c = mkNP (mkNP type_N (mkNP money_N)) (mkRS (mkVP (mkLoc (locativisedNoun (mkNP (possCN law_N c)))))) ;
         CentralBankFeature cb = mkNP (mkNP type_N (mkNP money_N)) (mkRS (mkVP be_taken_out_V)) ;

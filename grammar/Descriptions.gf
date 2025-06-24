@@ -1,4 +1,4 @@
-abstract Descriptions = Countries, Languages, Cities, Currencies ** {
+abstract Descriptions = Countries, Languages, Cities, Currencies, SymbolSBantu ** {
 
     flags
         startcat = Description ;
@@ -8,7 +8,8 @@ abstract Descriptions = Countries, Languages, Cities, Currencies ** {
         CityFeature ;
         CurrencyFeature ;
         LanguageFeature ;
-        NumberDet ;
+        NumberMod ;
+        SymbNumber ;
 
     fun
         CountryKindDescription : CountryKind -> Description ;
@@ -27,17 +28,26 @@ abstract Descriptions = Countries, Languages, Cities, Currencies ** {
         OfficialLanguage : Country -> LanguageFeature ;
         SpokenInCountry: Country -> LanguageFeature ;
         SpokenInTwoCountries : Country -> Country -> LanguageFeature ;
-        SpokenCountriesNumber : NumberDet -> LanguageFeature ;
-        NumberOfSpeakers : NumberDet -> LanguageFeature ;
+        SpokenCountriesNumber : NumberMod -> LanguageFeature ;
+        NumberOfSpeakers : NumberMod -> LanguageFeature ;
 
-        SpokenCountriesAndTheOfficial : Country -> NumberDet -> LanguageFeature ;
-        SpokenCountriesAndAnOfficial : Country -> NumberDet -> LanguageFeature ;
+        SpokenCountriesAndTheOfficial : Country -> NumberMod -> LanguageFeature ;
+        -- SpokenCountriesAndAnOfficial : Country -> NumberMod -> LanguageFeature ;
 
-        SpokenCountriesNumberOfSpeakers : NumberDet -> NumberDet -> LanguageFeature ;
+        SpokenCountriesNumberOfSpeakers : NumberMod -> NumberMod -> LanguageFeature ;
 
-        UsedInCountry : Country -> CurrencyFeature ;
+        OfficialCurrency : Country -> CurrencyFeature ;
         CentralBankFeature : CentralBank -> CurrencyFeature ;
 
-        IntDet : Int -> NumberDet ;
+        SymbModA : SymbNumber -> NumberMod ; -- 2-5
+        SymbModSmallN : SymbNumber -> NumberMod ; -- 6-9
+        SymbModN10Sg : SymbNumber -> NumberMod ; -- 10-19
+        SymbModN10Pl : SymbNumber -> NumberMod ; -- 20-99
+        SymbModN100Sg : SymbNumber -> NumberMod ; -- 100-199
+        SymbModN100Pl : SymbNumber -> NumberMod ; -- 200-999
+        SymbModN1000Sg : SymbNumber -> NumberMod ; -- 1000-1999
+        SymbModN1000Pl : SymbNumber -> NumberMod ; -- 2000-9999
+
+        SymbNumb : Symb -> SymbNumber ;
 
 }

@@ -1265,5 +1265,14 @@ resource LexiconEng = open SyntaxEng,ParadigmsEng in {
         Sovereign_Str : Str = "sovereign" ;     
 		West_Str : Str = "West" ;
 		Latin_Str : Str = "Latin" ;
+
+		Austrian_National_Bank_N : N = mkN "Austrian National Bank" ;
+		Austrian_Hungarian_Bank_N : N = mkN "Austrian-Hungarian Bank" ;
+		Bank_of_Central_African_States_N : N = mkN "Bank of Central African States" ;
+		Central_Bank_of_West_African_States_N : N = mkN "Central Bank of West African States" ;
+		Eastern_Caribbean_Central_Bank_N : N = mkN "Eastern Caribbean Central Bank" ;
+		European_Central_Bank_N : N = mkN "European Central Bank" ;
+		National_Bank_of_Serbia_N : N = mkN "National Bank of Serbia" ;
+
 		
 }
