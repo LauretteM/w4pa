@@ -1,0 +1,6 @@
+# All currencies used by a country or a subclass thereof
+SELECT DISTINCT ?item WHERE {
+  ?country wdt:P38 ?item .
+  ?country wdt:P31/wdt:P279* wd:Q6256 .
+}
+

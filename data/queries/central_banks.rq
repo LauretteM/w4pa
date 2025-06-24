@@ -1,5 +1,5 @@
 #Issuers of currencies used in 3 or more countries
-SELECT ?currency ?currencyLabel ?centralbankLabel ?centralbankDescription ?count
+SELECT ?centralbank ?centralbankLabel ?centralbankDescription
 WHERE
 {
   {
