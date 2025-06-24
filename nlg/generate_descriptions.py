@@ -16,6 +16,7 @@ except ImportError:
 CAPITAL_CITIES_QUERY_FILE = '../data/queries/capital_cities.auto.rq'
 COUNTRIES_QUERY_FILE = "../data/queries/countries.auto.rq"
 LANGUAGES_QUERY_FILE = "../data/queries/languages.auto.rq"
+CURRENCIES_QUERY_FILE = "../data/queries/currencies.auto.rq"
 
 WIKIDATA_SITE = pywikibot.Site("wikidata", "wikidata")
 QUERY_LENGTH_LIMIT = 500
@@ -28,6 +29,11 @@ lang_code_aliases = [
         "iso-2": "en",
         "iso-3": "eng",
         "gf": "Eng"
+    },
+    {
+        "iso-2": "zu",
+        "iso-3": "zul",
+        "gf": "Zul"
     }
 ]
 
@@ -37,11 +43,31 @@ def warning_msg_live(*args, **kwargs):
 def warning_msg_later(*args):
     WARNINGS.append(args)
 
+def build_bantu_number(number : int):
+    num_str = str(number)
+    if number < 5:
+        return f'(SymbModA (SymbNumb (MkSymb "{num_str}")))'
+    if number < 10:
+        return f'(SymbModSmallN (SymbNumb (MkSymb "{num_str}")))'
+    if number < 20:
+        return f'(SymbModN10Sg (SymbNumb (MkSymb "{num_str}")))'
+    if number < 100:
+        return f'(SymbModN10Pl (SymbNumb (MkSymb "{num_str}")))'
+    if number < 200:
+        return f'(SymbModN100Sg (SymbNumb (MkSymb "{num_str}")))'
+    if number < 1000:
+        return f'(SymbModN100Pl (SymbNumb (MkSymb "{num_str}")))'
+    if number < 2000:
+        return f'(SymbModN100Sg (SymbNumb (MkSymb "{num_str}")))'
+    else:
+        return f'(SymbModN100Pl (SymbNumb (MkSymb "{num_str}")))'
+
 
 def get_function_name_of_entity(entity_id, pgf_grammar):
     prefix = f"{entity_id}_"
     try:
-        fun = [f for f in pgf_grammar.functions if f.startswith(prefix)][0]
+        funs = [f for f in pgf_grammar.functions if f.startswith(prefix)]
+        fun = funs[0]
     except IndexError:
         return None
     return fun
@@ -206,10 +232,11 @@ def get_language_tree_str(lang_id, lang_dict, pgf_grammar):
         official_country_fun,number_of_official_langs = official_language_countries[0]
         if len(spoken_countries) > 1:
             number_spoken_countries = len(spoken_countries)
+            number_fun = build_bantu_number(number_spoken_countries)
             if number_of_official_langs == 1:
-                langfeature_fun = f"SpokenCountriesAndTheOfficial {official_country_fun} (IntDet {number_spoken_countries})"
+                langfeature_fun = f"SpokenCountriesAndTheOfficial {official_country_fun} {number_fun}"
             else:
-                langfeature_fun = f"SpokenCountriesAndAnOfficial {official_country_fun} (IntDet {number_spoken_countries})"
+                langfeature_fun = f"SpokenCountriesAndAnOfficial {official_country_fun} {number_fun}"
         else:
             langfeature_fun = f"OfficialLanguage {official_country_fun}"
     elif len(official_language_countries) == 0:
@@ -224,16 +251,48 @@ def get_language_tree_str(lang_id, lang_dict, pgf_grammar):
             )
         elif len(spoken_countries) > 2:
             number_spoken_countries = len(spoken_countries)
+            number_fun_countries = build_bantu_number(number_spoken_countries)
+            number_fun_speakers = build_bantu_number(number_of_speakers)
             if number_of_speakers > 0:
-                langfeature_fun = f"SpokenCountriesNumberOfSpeakers (IntDet {number_of_speakers}) (IntDet {number_spoken_countries})"
+                langfeature_fun = f"SpokenCountriesNumberOfSpeakers {number_fun_speakers} {number_fun_countries}"
             else:
-                langfeature_fun = f"SpokenCountriesNumber (IntDet {number_spoken_countries})"
+                langfeature_fun = f"SpokenCountriesNumber {number_fun_countries}"
     elif number_of_speakers > 0:
-        langfeature_fun = f"NumberOfSpeakers (IntDet {number_of_speakers})"
+        langfeature_fun = f"NumberOfSpeakers {number_fun_speakers}"
 
     if langfeature_fun:
         tree_str = f"LanguageFeatureDescription ({langfeature_fun})"
         return tree_str
+
+def get_currency_tree_str(currency_id, currency_dict, pgf_grammar):
+    
+    claims_dict = currency_dict["claims"]
+
+    try:
+        country_claims = claims_dict["P17"]
+        countries = [clm_tgt.getTarget() for clm_tgt in country_claims]
+    except KeyError:
+        countries = None
+    
+    if countries and len(countries) == 1:
+        c = countries[0]
+        c_dict = c.get()
+        c_id = c.getID()
+        country_fun = get_function_name_of_entity(c_id, pgf_grammar)
+        
+        currency_feature_fun = f'(OfficialCurrency {country_fun})'
+    elif not countries:
+        try:
+            issuer_claims = claims_dict["p562"]
+            issuers = [clm_tgt.getTarget() for clm_tgt in issuer_claims]
+        except KeyError:
+            issuers = None
+        
+    if not currency_feature_fun:
+        currency_feature_fun = 'FAILED_CURRENCY_FEATURE'
+
+    tree_str = f'CurrencyFeatureDescription ({currency_feature_fun})'
+    return tree_str
 
 def generate_descriptions(lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode=None):
 
@@ -251,13 +310,14 @@ def generate_descriptions(lang_code, pgf_grammar, query_filename, tree_str_fun, 
         entity = entities[i]
 
         entity_dict = entity.get()
-        entity_name = entity_dict["labels"][lang_code]
+        
         entity_id = entity.getID()
         entity_fun = get_function_name_of_entity(entity_id,pgf_grammar)
 
         tree_str = tree_str_fun(entity_id,entity_dict, pgf_grammar)
 
         if not entity_fun or not tree_str:
+            
             warning_msg(f"Not generating a description for {entity_name}")
             warning_msg(entity_fun)
             continue
@@ -266,6 +326,12 @@ def generate_descriptions(lang_code, pgf_grammar, query_filename, tree_str_fun, 
         conc_name = pgf_grammar.abstractName+find_gf_code(lang_code)
         conc = pgf_grammar.languages[conc_name]
         conc_lin = conc.linearize(tree)
+
+        try:
+            entity_name = entity_dict["labels"][lang_code]
+            entity_name = None
+        except KeyError:
+            entity_name = conc.linearize(pgf.readExpr(entity_fun))
 
         entity_data_dict = {
             "labels": {},
@@ -311,6 +377,16 @@ def generate_language_descriptions(lang_code, pgf_grammar, test_mode):
     query_filename = LANGUAGES_QUERY_FILE
     tree_str_fun = get_language_tree_str
     key_suffix = "Language"
+
+    return generate_descriptions(
+        lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode
+    )
+
+def generate_currency_descriptions(lang_code, pgf_grammar, test_mode):
+
+    query_filename = CURRENCIES_QUERY_FILE
+    tree_str_fun = get_currency_tree_str
+    key_suffix = "Currency"
 
     return generate_descriptions(
         lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode
@@ -380,6 +456,11 @@ if __name__ == '__main__':
             lang_code, pgf_grammar, args.test_mode_input
         )
         descriptions.update(language_descriptions)
+    if "currencies" in params["entity_types"]:
+        currency_descriptions = generate_currency_descriptions(
+            lang_code, pgf_grammar, args.test_mode_input
+        )
+        descriptions.update(currency_descriptions)
 
     if args.supress_warnings:
         for a in WARNINGS:
