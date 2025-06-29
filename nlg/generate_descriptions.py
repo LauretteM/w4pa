@@ -65,6 +65,7 @@ def build_bantu_number(number : int):
 
 def get_function_name_of_entity(entity_id, pgf_grammar):
     prefix = f"{entity_id}_"
+    # warning_msg(f"Looking for {entity_id}")
     try:
         funs = [f for f in pgf_grammar.functions if f.startswith(prefix)]
         fun = funs[0]
@@ -97,7 +98,10 @@ def get_capital_city_tree_str(city_id,city_dict, pgf_grammar):
         if not 'P582' in qualifiers.keys(): # if the country claim has no end date
             break
     country_tgt = country_claim.getTarget()
-    country_id = country_tgt.getID()
+    if country_tgt:
+        country_id = country_tgt.getID()
+    else:
+        return
     if city_id == country_id:
         return # city state, will deal with this as a country
     country_fun = get_function_name_of_entity(country_id,pgf_grammar)
@@ -228,6 +232,8 @@ def get_language_tree_str(lang_id, lang_dict, pgf_grammar):
     except KeyError:
         pass
 
+    number_fun_speakers = build_bantu_number(number_of_speakers)
+
     if len(official_language_countries) == 1:
         official_country_fun,number_of_official_langs = official_language_countries[0]
         if len(spoken_countries) > 1:
@@ -236,7 +242,7 @@ def get_language_tree_str(lang_id, lang_dict, pgf_grammar):
             if number_of_official_langs == 1:
                 langfeature_fun = f"SpokenCountriesAndTheOfficial {official_country_fun} {number_fun}"
             else:
-                langfeature_fun = f"SpokenCountriesAndAnOfficial {official_country_fun} {number_fun}"
+                langfeature_fun = f"SpokenCountriesAndTheOfficial {official_country_fun} {number_fun}"
         else:
             langfeature_fun = f"OfficialLanguage {official_country_fun}"
     elif len(official_language_countries) == 0:
@@ -273,6 +279,7 @@ def get_currency_tree_str(currency_id, currency_dict, pgf_grammar):
         countries = [clm_tgt.getTarget() for clm_tgt in country_claims]
     except KeyError:
         countries = None
+    currency_feature_fun = None
     
     if countries and len(countries) == 1:
         c = countries[0]
@@ -281,10 +288,17 @@ def get_currency_tree_str(currency_id, currency_dict, pgf_grammar):
         country_fun = get_function_name_of_entity(c_id, pgf_grammar)
         
         currency_feature_fun = f'(OfficialCurrency {country_fun})'
-    elif not countries:
+    else:
         try:
-            issuer_claims = claims_dict["p562"]
+            issuer_claims = claims_dict["P562"]
+            num = len(issuer_claims)
+            warning_msg(f"Number of issuers {num}")
             issuers = [clm_tgt.getTarget() for clm_tgt in issuer_claims]
+            issuer = issuers[0]
+            iss_id = issuer.getID()
+            issuer_fun = get_function_name_of_entity(iss_id, pgf_grammar)
+
+            currency_feature_fun = f'(CentralBankFeature {issuer_fun})'
         except KeyError:
             issuers = None
         
@@ -305,47 +319,67 @@ def generate_descriptions(lang_code, pgf_grammar, query_filename, tree_str_fun, 
 
     descriptions = {}
 
+    if not entities:
+        return
+
     for i in tqdm(range(len(entities)), desc="Analysing Wikidata..."):
-
-        entity = entities[i]
-
-        entity_dict = entity.get()
-        
-        entity_id = entity.getID()
-        entity_fun = get_function_name_of_entity(entity_id,pgf_grammar)
-
-        tree_str = tree_str_fun(entity_id,entity_dict, pgf_grammar)
-
-        if not entity_fun or not tree_str:
-            
-            warning_msg(f"Not generating a description for {entity_name}")
-            warning_msg(entity_fun)
-            continue
-
-        tree = pgf.readExpr(tree_str)
-        conc_name = pgf_grammar.abstractName+find_gf_code(lang_code)
-        conc = pgf_grammar.languages[conc_name]
-        conc_lin = conc.linearize(tree)
-
         try:
-            entity_name = entity_dict["labels"][lang_code]
-            entity_name = None
-        except KeyError:
-            entity_name = conc.linearize(pgf.readExpr(entity_fun))
 
-        entity_data_dict = {
-            "labels": {},
-            "descriptions": {},
-            "wd_id": entity_id,
-            "gf_id": entity_fun,
-            "description_tree": tree_str
-        }
-        entity_data_dict["labels"][find_iso_3_code(lang_code)] = entity_name
-        entity_data_dict["descriptions"][find_iso_3_code(lang_code)] = conc_lin
+            entity = entities[i]
 
-        entity_key = f"{entity_fun}_{key_suffix}"
+            entity_dict = entity.get()
+            
+            entity_id = entity.getID()
+            entity_fun = get_function_name_of_entity(entity_id,pgf_grammar)
 
-        descriptions[entity_key] = entity_data_dict
+            tree_str = tree_str_fun(entity_id,entity_dict, pgf_grammar)
+
+            if not entity_fun or not tree_str:
+                
+                warning_msg(f"Not generating a description for {entity_id}")
+                warning_msg(entity_fun)
+                continue
+
+            tree = pgf.readExpr(tree_str)
+            conc_name = pgf_grammar.abstractName+find_gf_code(lang_code)
+            conc = pgf_grammar.languages[conc_name]
+
+            try:
+                entity_label = entity_dict["labels"][lang_code]
+                warning_msg(f"using existing name for {entity_fun}: {entity_label}")
+            except KeyError:
+                entity_label = None
+            new_label = conc.linearize(pgf.readExpr(entity_fun))
+
+            try:
+                entity_descr = entity_dict["descriptions"][lang_code]
+                warning_msg(f"using existing description for {entity_fun}: {entity_descr}")
+            except KeyError:
+                entity_descr = None
+            new_descr = conc.linearize(tree)
+
+            entity_data_dict = {
+                "labels": {},
+                "descriptions": {},
+                "wd_id": entity_id,
+                "gf_id": entity_fun,
+                "description_tree": tree_str
+            }
+            eng_label = entity_dict["labels"]['en']
+            entity_data_dict["labels"]['eng'] = eng_label
+
+            entity_data_dict["labels"][find_iso_3_code(lang_code)+"_old"] = entity_label
+            entity_data_dict["descriptions"][find_iso_3_code(lang_code)+"_old"] = entity_descr
+
+            entity_data_dict["labels"][find_iso_3_code(lang_code)+"_new"] = new_label
+            entity_data_dict["descriptions"][find_iso_3_code(lang_code)+"_new"] = new_descr
+
+            entity_key = f"{entity_fun}_{key_suffix}"
+
+            descriptions[entity_key] = entity_data_dict
+        
+        except AttributeError: # whatever goes wrong, just don't break
+            warning_msg(f"Skipping entity number {i}")
 
     return descriptions
 
@@ -399,7 +433,11 @@ def get_entities(query_filename):
         QUERY = query_file.read()
     generator = pg.WikidataSPARQLPageGenerator(QUERY, site=WIKIDATA_SITE)
 
-    entities = list(itertools.islice(generator, QUERY_LENGTH_LIMIT))
+    try:
+        entities = list(itertools.islice(generator, QUERY_LENGTH_LIMIT))
+    except TypeError as e:
+        warning_msg(f"Could not retrieve entities using {query_filename}")
+        return
 
     return entities
 
@@ -417,6 +455,32 @@ def get_test_entities(filename):
         entities.append(item)
     
     return entities
+
+def update_yaml(yaml_filename,descriptions):
+    if descriptions:
+        if yaml_filename:
+            try:
+                with open(yaml_filename) as f:
+                    base_data = load(f,Loader=Loader)
+            except FileNotFoundError:
+                    warning_msg(f"File not found: {yaml_filename}. Creating new file.")
+                    base_data = {}
+
+            for key in descriptions:
+                if key in base_data:
+                    base_data[key].update(descriptions[key])
+                else:
+                    base_data[key] = descriptions[key]
+                yaml = dump(base_data, Dumper=Dumper)
+
+            with open(yaml_filename, "w") as f:
+                f.write(yaml)
+        else:
+            yaml = dump(descriptions, Dumper=Dumper)
+            print(yaml)
+    else:
+        warning_msg(f"Cannot write descriptions.")
+    
 
 
 if __name__ == '__main__':
@@ -442,53 +506,30 @@ if __name__ == '__main__':
 
     pgf_grammar = pgf.readPGF(os.path.join("..","grammar",params["pgf_grammar"]))
 
-    descriptions = {}
     if "capital_cities" in params['entity_types']:
         city_descriptions = generate_capital_city_descriptions(lang_code, pgf_grammar,args.test_mode_input)
-        descriptions.update(city_descriptions)
+        update_yaml(args.amend_yaml_file,city_descriptions)
+
     if "countries" in params['entity_types']:
         country_descriptions = generate_country_descriptions(
             lang_code, pgf_grammar, args.test_mode_input
         )
-        descriptions.update(country_descriptions)
+        update_yaml(args.amend_yaml_file,country_descriptions)
+
     if "languages" in params["entity_types"]:
         language_descriptions = generate_language_descriptions(
             lang_code, pgf_grammar, args.test_mode_input
         )
-        descriptions.update(language_descriptions)
+        update_yaml(args.amend_yaml_file,language_descriptions)
+
     if "currencies" in params["entity_types"]:
         currency_descriptions = generate_currency_descriptions(
             lang_code, pgf_grammar, args.test_mode_input
         )
-        descriptions.update(currency_descriptions)
+        update_yaml(args.amend_yaml_file,currency_descriptions)
 
     if args.supress_warnings:
         for a in WARNINGS:
             print(*a, file=sys.stderr)
 
-    if args.amend_yaml_file:
-
-        with open(args.amend_yaml_file) as f:
-            base_data = load(f,Loader=Loader)
-            if not base_data:
-                base_data = {}
-
-        for key in descriptions:
-            if key in base_data:
-                base_data[key]["description_tree"] = descriptions[key]["description_tree"]
-                base_data[key]["gf_id"] = descriptions[key]["gf_id"]
-                base_data[key]["wd_id"] = descriptions[key]["wd_id"]
-                base_data[key]["labels"][find_iso_3_code(lang_code)] \
-                    = descriptions[key]["labels"][find_iso_3_code(lang_code)]
-                base_data[key]["descriptions"][find_iso_3_code(lang_code)] = (
-                    descriptions[key]["descriptions"][find_iso_3_code(lang_code)]
-                )
-            else:
-                base_data[key] = descriptions[key]
-            yaml = dump(base_data, Dumper=Dumper)
-
-        with open(args.amend_yaml_file, "w") as f:
-            f.write(yaml)
-    else:
-        yaml = dump(descriptions, Dumper=Dumper)
-        print(yaml)
+    
