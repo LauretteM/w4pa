@@ -12,3 +12,4 @@ Additional team members:
 - Roné Wierenga
 
 The aim of this project is to employ natural language generation for expanding Wikidata entries with high quality labels and descriptions in the Bantu languages using Grammatical Framework (GF), with an initial focus on isiZulu, and the geopolitical domain.
+
