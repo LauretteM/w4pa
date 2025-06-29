@@ -1,4 +1,4 @@
-concrete DescriptionsZul of Descriptions = CountriesZul, CurrenciesZul, SymbolSBantuZul ** open SyntaxSBantuZul,ParadigmsZul,Prelude,ResZul,WikiDataLexiconZul in {
+concrete DescriptionsZul of Descriptions = CountriesZul, CurrenciesZul, LanguagesZul, CitiesZul, SymbolSBantuZul ** open SyntaxSBantuZul,ParadigmsZul,Prelude,ResZul,WikiDataLexiconZul in {
 
     lincat
         Description = NP ;
@@ -16,6 +16,7 @@ concrete DescriptionsZul of Descriptions = CountriesZul, CurrenciesZul, SymbolSB
         CityDescription c = mkNP (possCN capital_city_N c) ;
         CityFeatureDescription cf c = mkNP cf together_with_ConjN (mkNP (possCN capital_city_N c)) ;
 
+        LanguageFeatureDescription f = f ;
         CurrencyFeatureDescription f = f ;
 
         LargestCity = mkNP (mkNP city_N) (mkRS (mkVP (mkAP big_A))) ;
@@ -30,7 +31,7 @@ concrete DescriptionsZul of Descriptions = CountriesZul, CurrenciesZul, SymbolSB
         SpokenCountriesNumberOfSpeakers numc nums = mkNP (mkNP language_N) (mkRS (mkRS (assocVP (mkNP (mkNP aPl_Det speaker_N) (mkRS nums)))) and_Conj (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP (mkNP aPl_Det country_N) (mkRS numc)))))) ;
 
         OfficialCurrency c = mkNP (mkNP type_N (mkNP money_N)) (mkRS (mkVP (mkLoc (locativisedNoun (mkNP (possCN law_N c)))))) ;
-        CentralBankFeature cb = mkNP (mkNP type_N (mkNP money_N)) (mkRS (mkVP be_taken_out_V)) ;
+        CentralBankFeature cb = mkNP (mkNP type_N (mkNP money_N)) (mkRS (mkVP be_taken_out_V2 cb)) ;
 
         SymbModA s = mkVP (mkAP (mkNumA s)) ;
         SymbModSmallN s = mkVP (mkNP aSg_Det (mkSmallNumN s)) ;

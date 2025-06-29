@@ -68,7 +68,7 @@ abstract Cities = {
 		Q1354_Dhaka : CapitalCity ;
 		Q7003_Dijon : CapitalCity ;
 		Q9310_Dili : CapitalCity ;
-		Q3604_Djibouti : CapitalCity ;
+		Q3604_Djibouti_City : CapitalCity ;
 		Q3866_Dodoma : CapitalCity ;
 		Q3861_Doha : CapitalCity ;
 		Q1761_Dublin : CapitalCity ;
