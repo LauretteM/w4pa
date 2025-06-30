@@ -28,7 +28,7 @@ concrete DescriptionsZul of Descriptions = CountriesZul, CurrenciesZul, Language
         NumberOfSpeakers nummod = mkNP (mkNP language_N) (mkRS (assocVP (mkNP (mkNP aPl_Det speaker_N) (mkRS nummod)))) ;
         
         SpokenCountriesAndTheOfficial c nummod = mkNP (mkNP language_N) (mkRS (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP (mkNP aPl_Det country_N) (mkRS nummod))))) and_Conj (mkRS (mkVP (mkLoc (locativisedNoun (mkNP (possCN law_N c))))))) ;
-        SpokenCountriesNumberOfSpeakers numc nums = mkNP (mkNP language_N) (mkRS (mkRS (assocVP (mkNP (mkNP aPl_Det speaker_N) (mkRS nums)))) and_Conj (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP (mkNP aPl_Det country_N) (mkRS numc)))))) ;
+        SpokenCountriesNumberOfSpeakers nums numc = mkNP (mkNP language_N) (mkRS (mkRS (assocVP (mkNP (mkNP aPl_Det speaker_N) (mkRS nums)))) and_Conj (mkRS (mkVP (mkVP is_spoken_V) (SyntaxSBantuZul.mkAdv (mkNP (mkNP aPl_Det country_N) (mkRS numc)))))) ;
 
         OfficialCurrency c = mkNP (mkNP type_N (mkNP money_N)) (mkRS (mkVP (mkLoc (locativisedNoun (mkNP (possCN law_N c)))))) ;
         CentralBankFeature cb = mkNP (mkNP type_N (mkNP money_N)) (mkRS (mkVP be_taken_out_V2 cb)) ;
