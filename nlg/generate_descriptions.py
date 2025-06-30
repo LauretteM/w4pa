@@ -17,9 +17,14 @@ CAPITAL_CITIES_QUERY_FILE = '../data/queries/capital_cities.auto.rq'
 COUNTRIES_QUERY_FILE = "../data/queries/countries.auto.rq"
 LANGUAGES_QUERY_FILE = "../data/queries/languages.auto.rq"
 CURRENCIES_QUERY_FILE = "../data/queries/currencies.auto.rq"
+MUNICIPALITIES_QUERY_FILE = "../data/queries/local_municipalities.auto.rq"
 
 WIKIDATA_SITE = pywikibot.Site("wikidata", "wikidata")
 QUERY_LENGTH_LIMIT = 500
+
+class W4PAException(Exception):
+    pass
+
 
 WARNINGS = []
 warning_msg = None
@@ -70,7 +75,7 @@ def get_function_name_of_entity(entity_id, pgf_grammar):
         funs = [f for f in pgf_grammar.functions if f.startswith(prefix)]
         fun = funs[0]
     except IndexError:
-        return None
+        raise W4PAException
     return fun
 
 def find_code(lang_code,code_type):
@@ -308,6 +313,35 @@ def get_currency_tree_str(currency_id, currency_dict, pgf_grammar):
     tree_str = f'CurrencyFeatureDescription ({currency_feature_fun})'
     return tree_str
 
+def get_municipality_tree_str(municipality_id,municipality_dict,pgf_grammar):
+
+    claims_dict = municipality_dict["claims"]
+
+    try:
+        country_claims = claims_dict["P17"]
+        countries = [clm_tgt.getTarget() for clm_tgt in country_claims]
+    except KeyError:
+        countries = None
+    
+    if countries and len(countries) == 1:
+        c = countries[0]
+        c_id = c.getID()
+        country_fun = get_function_name_of_entity(c_id, pgf_grammar)
+
+        try:
+            territory_claims = claims_dict["P131"]
+            territories = [clm_tgt.getTarget() for clm_tgt in territory_claims]
+            t = territories[0]
+            t_dict = t.get()
+            zul_label = t_dict["labels"]["zu"]
+
+            return f'LocalMunicipalityDescription (SymbAdminTerritory (MkSymb "{zul_label}")) {country_fun}'
+
+        except (IndexError,KeyError):
+            return
+    else:
+        return
+
 def generate_descriptions(lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode=None):
 
     lang_code = find_iso_2_code(lang_code)
@@ -323,14 +357,18 @@ def generate_descriptions(lang_code, pgf_grammar, query_filename, tree_str_fun, 
         return
 
     for i in tqdm(range(len(entities)), desc="Analysing Wikidata..."):
-        try:
 
+        try:
             entity = entities[i]
 
             entity_dict = entity.get()
             
             entity_id = entity.getID()
             entity_fun = get_function_name_of_entity(entity_id,pgf_grammar)
+        except W4PAException:
+            entity_fun = f'{entity_id}'
+
+        try:
 
             tree_str = tree_str_fun(entity_id,entity_dict, pgf_grammar)
 
@@ -426,6 +464,15 @@ def generate_currency_descriptions(lang_code, pgf_grammar, test_mode):
         lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode
     )
 
+def generate_municipality_descriptions(lang_code, pgf_grammar, test_mode):
+
+    query_filename = MUNICIPALITIES_QUERY_FILE
+    tree_str_fun = get_municipality_tree_str
+    key_suffix = "LocalMunicipality"
+
+    return generate_descriptions(
+        lang_code, pgf_grammar, query_filename, tree_str_fun, key_suffix, test_mode
+    )
 
 def get_entities(query_filename):
     # get all entities
@@ -527,6 +574,12 @@ if __name__ == '__main__':
             lang_code, pgf_grammar, args.test_mode_input
         )
         update_yaml(args.amend_yaml_file,currency_descriptions)
+    
+    if "local_municipalities" in params["entity_types"]:
+        municipality_descriptions = generate_municipality_descriptions(
+            lang_code, pgf_grammar, args.test_mode_input
+        )
+        update_yaml(args.amend_yaml_file,municipality_descriptions)
 
     if args.supress_warnings:
         for a in WARNINGS:
