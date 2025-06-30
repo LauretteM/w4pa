@@ -1,0 +1,5 @@
+# All instances of local municipalities in South Africa
+SELECT DISTINCT ?item WHERE {
+  ?item wdt:P31 wd:Q1500352 .
+}
+

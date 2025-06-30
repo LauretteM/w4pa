@@ -1,0 +1,6 @@
+# All instances of local municipalities in South Africa
+SELECT DISTINCT ?muni ?muniLabel_en WHERE {
+  ?muni wdt:P31 wd:Q1500352 .
+  ?muni rdfs:label ?muniLabel_en . FILTER(lang(?muniLabel_en)='en') .
+}
+ORDER BY ?muniLabel_en
