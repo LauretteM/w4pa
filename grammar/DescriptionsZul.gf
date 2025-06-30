@@ -7,6 +7,7 @@ concrete DescriptionsZul of Descriptions = CountriesZul, CurrenciesZul, Language
         CurrencyFeature = NP ;
         NumberMod = VP ;
         SymbNumber = Symb ;
+        AdminTerritory = N ;
 
     lin
         CountryKindDescription ck = ck ;
@@ -32,6 +33,10 @@ concrete DescriptionsZul of Descriptions = CountriesZul, CurrenciesZul, Language
 
         OfficialCurrency c = mkNP (mkNP type_N (mkNP money_N)) (mkRS (mkVP (mkLoc (locativisedNoun (mkNP (possCN law_N c)))))) ;
         CentralBankFeature cb = mkNP (mkNP type_N (mkNP money_N)) (mkRS (mkVP be_taken_out_V2 cb)) ;
+
+        LocalMunicipalityDescription territory country = mkNP (mkNP (mkCN municipality_N (mkNP territory_N))) (SyntaxSBantuZul.mkAdv (locativisedNoun (mkNP (possCN territory country)))) ;
+
+        SymbAdminTerritory s = mkLoanPlaceNameN s ;
 
         SymbModA s = mkVP (mkAP (mkNumA s)) ;
         SymbModSmallN s = mkVP (mkNP aSg_Det (mkSmallNumN s)) ;

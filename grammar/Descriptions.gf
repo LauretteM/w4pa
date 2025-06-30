@@ -10,6 +10,7 @@ abstract Descriptions = Countries, Languages, Cities, Currencies, SymbolSBantu *
         LanguageFeature ;
         NumberMod ;
         SymbNumber ;
+        AdminTerritory ;
 
     fun
         CountryKindDescription : CountryKind -> Description ;
@@ -38,6 +39,10 @@ abstract Descriptions = Countries, Languages, Cities, Currencies, SymbolSBantu *
 
         OfficialCurrency : Country -> CurrencyFeature ;
         CentralBankFeature : CentralBank -> CurrencyFeature ;
+
+        LocalMunicipalityDescription: AdminTerritory -> Country -> Description ;
+
+        SymbAdminTerritory : Symb -> AdminTerritory ;
 
         SymbModA : SymbNumber -> NumberMod ; -- 2-5
         SymbModSmallN : SymbNumber -> NumberMod ; -- 6-9

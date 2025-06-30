@@ -16,6 +16,7 @@ resource WikiDataLexiconZul = open CatZul,ResZul,ParadigmsZul,SyntaxSBantuZul in
         state_N : N = mkN "buso" C3_4 ;
         union_N : N = mkN "nyunyana" C9_10 ;
 		continent_N : N = mkN "zwekazi" C5_6 ;
+		municipality_N : N = mkN "masipala" C1a_2a ;
 
 		capital_city_N : N = mkN "nhlokodolobha" C9_10 ;
 		city_N : N = mkN "dolobha" C5_6 ;
