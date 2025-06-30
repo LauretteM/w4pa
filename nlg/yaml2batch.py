@@ -15,7 +15,7 @@ def generate_batch_fragment(entity,lang_code):
         eng_label = entity["labels"]["eng"]
         if new_label and not old_label:
             fragment.append(f'{wikidata_id} L{lang_code} "{new_label}"')
-        if old_label == eng_label:
+        if new_label and old_label == eng_label:
             fragment.append(f'{wikidata_id} L{lang_code} "{new_label}"')
     except KeyError:
         pass
